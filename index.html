@@ -1,0 +1,149 @@
+
+        'title' => 'Decoding Your Destiny: The Power of Numerology Number 7',
+        'excerpt' => 'The number 7 is the seeker, the thinker, the spiritual scientist. Learn how this powerful number influences your life path and aura.',
+        'date' => 'October 25, 2025',
+        'author' => 'Cosmic Jane',
+        'category' => 'Numerology',
+        'color' => 'indigo-500',
+    ],
+    [
+        'title' => 'A Beginner\'s Guide to Reading Your Own Natal Chart',
+        'excerpt' => 'Go beyond your sun sign! This guide breaks down the essential components of your birth chart: planets, houses, and aspects.',
+        'date' => 'October 18, 2025',
+        'author' => 'Aura Maven',
+        'category' => 'Astrology',
+        'color' => 'pink-500',
+    ],
+    [
+        'title' => 'What Does a Green Aura Really Mean?',
+        'excerpt' => 'Green is the color of healing and growth. Discover if you are a natural nurturer and how to cleanse a blocked green aura.',
+        'date' => 'October 10, 2025',
+        'author' => 'The Vibe Catcher',
+        'category' => 'Aura',
+        'color' => 'teal-500',
+    ],
+];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurakivibes - Cosmic Blog</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb;
+            background: #0d0517; /* Dark background */
+        }
+        .post-card {
+            background-color: #1a0a33; /* Dark purple base */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4); /* Purple glow on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mock WordPress Header (equivalent to get_header() in a real theme) -->
+    <header class="bg-black/90 border-b border-purple-800 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-pink-400 tracking-wider">
+                Aurakivibes Blog
+            </h1>
+            <nav class="space-x-4">
+                <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300">Home</a>
+                <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300">About</a>
+                <?php // echo get_template_part('nav-menu'); // Example of PHP function ?>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <h2 class="text-5xl font-extrabold mb-10 text-center text-white">
+            Cosmic Insights
+        </h2>
+
+        <!-- WordPress Loop Area -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <?php
+            // The actual WordPress loop would look like this:
+            // if ( have_posts() ) : while ( have_posts() ) : the_post();
+            
+            // Using mock data for demonstration
+            foreach ($mock_posts as $post) :
+            ?>
+
+            <!-- Individual Post Card -->
+            <div class="post-card p-6 rounded-xl border border-purple-700/50">
+                <!-- Category Tag -->
+                <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-<?= $post['color']; ?>/20 text-<?= $post['color']; ?> mb-4">
+                    <?= $post['category']; ?>
+                </span>
+
+                <!-- Post Title (using the_title() in a real WP theme) -->
+                <h3 class="text-2xl font-bold mb-3 text-white hover:text-pink-400 transition duration-300 cursor-pointer">
+                    <!-- Example of a PHP dynamic link function -->
+                    <a href="<?php // echo get_permalink(); ?>">
+                        <?= $post['title']; ?>
+                    </a>
+                </h3>
+
+                <!-- Post Excerpt (using the_excerpt() in a real WP theme) -->
+                <p class="text-gray-400 mb-4">
+                    <?= $post['excerpt']; ?>
+                </p>
+
+                <!-- Post Meta Data -->
+                <div class="text-sm text-gray-500 flex justify-between items-center pt-2 border-t border-purple-900/50">
+                    <span>
+                        By <span class="text-indigo-300"><?= $post['author']; ?></span>
+                    </span>
+                    <span>
+                        <?= $post['date']; ?>
+                    </span>
+                </div>
+            </div>
+
+            <?php
+            endforeach;
+            // The actual WordPress loop termination:
+            // endwhile; endif;
+            ?>
+
+        </div>
+        <!-- End WordPress Loop Area -->
+
+        <!-- Pagination (Example structure) -->
+        <div class="flex justify-center mt-12 space-x-4">
+            <button class="px-5 py-2 rounded-full bg-gray-700 text-gray-400 cursor-not-allowed">
+                &larr; Previous
+            </button>
+            <button class="px-5 py-2 rounded-full bg-pink-600 text-white hover:bg-pink-700 transition duration-300">
+                Next &rarr;
+            </button>
+            <?php // echo paginate_links(); // Example of a PHP pagination function ?>
+        </div>
+
+    </main>
+
+    <!-- Mock WordPress Footer (equivalent to get_footer() in a real theme) -->
+    <footer class="bg-black/90 border-t border-purple-800 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; <?php echo date('Y'); ?> Aurakivibes. Powered by WordPress.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
