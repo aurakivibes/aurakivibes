@@ -3,123 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aura Ki Vibes — Numerology · Astrology · Vibes</title>
+  <title>Aura Ki Vibes — Numerology · Astrology · Kundli</title>
 
-  <!-- Tailwind -->
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root{
-      --accent-1: #f97316;
-      --accent-2: #fb7185;
-      --card: rgba(255,255,255,0.90);
+      --bg1: #fff7ed;
+      --bg2: #fff7f9;
       --muted: #475569;
+      --card: rgba(255,255,255,0.95);
+      --accent1: #f97316;
+      --accent2: #fb7185;
     }
     html,body{height:100%;}
     body{
       margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#fff7ed 0%, #fff 40%, #fff7f9 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg,var(--bg1) 0%, #fff 38%, var(--bg2) 100%);
       color:#0f172a;
       -webkit-font-smoothing:antialiased;
     }
     .glass { background: var(--card); backdrop-filter: blur(6px); }
-    .small-muted { color: var(--muted); font-size:0.95rem; }
-    .hero-sun { filter: drop-shadow(0 6px 20px rgba(0,0,0,0.06)); }
-    .rounded-image { border-radius: 12px; object-fit: cover; width:100%; height:100%; }
-    code{background:#f3f4f6;padding:2px 6px;border-radius:6px;font-size:0.9rem;}
+    .small-muted{ color:var(--muted); }
+    .hero-right img{ filter: drop-shadow(0 18px 40px rgba(0,0,0,0.06)); }
+    .rounded-image{ border-radius:12px; object-fit:cover; width:100%; height:100%; }
     @media (max-width:900px){
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-right { order: -1; }
+      .hero-grid{ grid-template-columns: 1fr; gap:1.5rem; }
+      .hero-right{ order:-1; display:flex; justify-content:center; }
     }
+    code{ background:#f3f4f6; padding:2px 6px; border-radius:6px; font-size:0.9rem; }
+    .nav-link{ color:#334155; font-weight:600; }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="relative z-20">
-    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+  <!-- HEADER -->
+  <header class="z-30">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div id="logo" class="w-14 h-14 rounded-full bg-gradient-to-tr from-purple-600 to-rose-400 flex items-center justify-center text-white font-extrabold shadow-lg">AK</div>
+        <div id="logo" class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 to-rose-400 flex items-center justify-center text-white font-extrabold shadow-lg">AK</div>
         <div>
-          <h1 class="text-lg font-extrabold">Aura Ki Vibes</h1>
-          <p class="text-xs small-muted">Numerology · Astrology · Vibes</p>
+          <div class="text-lg font-extrabold">Aura Ki Vibes</div>
+          <div class="text-xs small-muted">Numerology · Astrology · Kundli</div>
         </div>
       </div>
 
-      <nav class="hidden md:flex gap-6 text-sm text-slate-600 font-semibold">
-        <a href="#numerology">Life Path</a>
-        <a href="#love">Love Match</a>
-        <a href="#vibe">Today's Vibe</a>
-        <a href="#kundli">Kundli</a>
-        <a href="#contact">Contact</a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a class="nav-link" href="#numerology">Life Path</a>
+        <a class="nav-link" href="#love">Love Match</a>
+        <a class="nav-link" href="#kundli">Kundli</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- MAIN -->
-  <main class="relative z-10 max-w-6xl mx-auto px-6 py-10">
-    <!-- HERO (MonkVyasa-like layout: left copy, right decorative sun) -->
-    <section class="grid hero-grid md:grid-cols-2 gap-8 items-center mb-12">
-      <div class="space-y-4">
-        <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">Foresight Done Right — Aura Ki Vibes</h2>
-        <p class="small-muted text-lg">Modern numerology, astrology and vibe readings inspired by Indian aesthetics — clear, helpful and easy to use.</p>
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- HERO: left copy, right mandala -->
+    <section class="grid hero-grid md:grid-cols-2 gap-8 items-center mb-14">
+      <div>
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">Foresight Done Right — Aura Ki Vibes</h1>
+        <p class="mt-4 small-muted text-lg max-w-xl">Modern numerology, detailed kundli forms and accurate readings with an Indian aesthetic — clear, trustworthy and easy to use.</p>
 
-        <div class="mt-6 flex flex-wrap gap-3">
+        <div class="mt-6 flex gap-3">
           <button onclick="scrollToSection('numerology')" class="px-6 py-3 rounded bg-gradient-to-r from-orange-400 to-rose-400 text-white font-semibold shadow">Start Free Reading</button>
           <button onclick="scrollToSection('kundli')" class="px-6 py-3 rounded border">Generate Kundli</button>
         </div>
 
         <p class="mt-4 small-muted">Tip: Replace placeholder images and logo with your brand assets for a polished look.</p>
 
-        <div class="mt-6 flex gap-3 items-center small-muted">
-          <div class="text-sm">Follow us:</div>
-          <div class="flex gap-2">
-            <a class="text-sm" href="#" aria-label="Instagram">IG</a>
-            <a class="text-sm" href="#" aria-label="LinkedIn">LI</a>
-            <a class="text-sm" href="#" aria-label="Facebook">FB</a>
-          </div>
+        <div class="mt-6 text-sm small-muted">
+          Follow us:
+          <a class="ml-2 underline" href="#">IG</a>
+          <a class="ml-2 underline" href="#">LI</a>
+          <a class="ml-2 underline" href="#">FB</a>
         </div>
       </div>
 
-      <!-- right: decorative sun / mandala -->
+      <!-- RIGHT: golden mandala image (use your file or keep hosted image) -->
       <div class="hero-right flex items-center justify-center">
-        <!-- decorative SVG sun / mandala -->
-        <svg class="hero-sun w-96 h-96" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#F9A825"/>
-              <stop offset="1" stop-color="#FB7185"/>
-            </linearGradient>
-          </defs>
-          <circle cx="300" cy="300" r="110" fill="url(#g1)" opacity="0.95" />
-          <g stroke="#8B5CF6" stroke-opacity="0.12" stroke-width="2" transform="translate(300,300)">
-            <!-- radiating lines -->
-            <g id="rays">
-              <!-- many rays generated -->
-              <!-- simple loop substitute: draw 36 rays -->
-              <!-- static here -->
-              <g>
-                <!-- 36 rays -->
-              </g>
-            </g>
-          </g>
+        <!-- Hosted image (reliable on GitHub Pages). Replace URL with your asset if available -->
+        <img src="https://i.ibb.co/GJ2B3zV/golden-sun-mandala.png" alt="Golden Mandala Sun" class="w-80 md:w-[420px]" />
+      </div>
+    </section>
 
-          <!-- stylized face -->
-          <g transform="translate(300,300)" fill="#fff" opacity="0.9">
-            <ellipse rx="60" ry="60" />
-            <path d="M-18,-8 q18,14 36,0" stroke="#fff" stroke-width="2" fill="none" />
-            <circle cx="-18" cy="-8" r="4" fill="#8B5CF6" />
-            <circle cx="18" cy="-8" r="4" fill="#8B5CF6" />
-          </g>
-
-          <!-- subtle decorative dots -->
-          <g fill="#F59E0B" opacity="0.16">
-            <circle cx="430" cy="150" r="6" />
-            <circle cx="460" cy="320" r="4" />
-            <circle cx="170" cy="420" r="5" />
-            <circle cx="110" cy="200" r="6" />
-          </g>
-        </svg>
+    <!-- GRID OF FEATURE CARDS (like MonkVyasa compact cards) -->
+    <section class="grid sm:grid-cols-3 gap-4 mb-12">
+      <div class="glass p-4 rounded-2xl shadow">
+        <div class="font-semibold">Daily Panchang</div>
+        <div class="small-muted mt-2">Tithi, Nakshatra, Rahu Kaal — quick daily panel.</div>
+      </div>
+      <div class="glass p-4 rounded-2xl shadow">
+        <div class="font-semibold">Nakshatra & Muhurat</div>
+        <div class="small-muted mt-2">Handy muhurats & auspicious timings.</div>
+      </div>
+      <div class="glass p-4 rounded-2xl shadow">
+        <div class="font-semibold">Top Reports</div>
+        <div class="small-muted mt-2">Love, Career & Finance PDFs.</div>
       </div>
     </section>
 
@@ -127,4 +108,254 @@
     <section id="numerology" class="mb-10">
       <div class="glass p-6 rounded-2xl shadow grid md:grid-cols-2 gap-6">
         <div>
-          <h3 class="text-2
+          <h3 class="text-2xl font-bold mb-3">Life Path Calculator</h3>
+          <p class="small-muted mb-3">Enter name and date of birth. Mobile optional for lead capture.</p>
+
+          <label class="text-sm font-semibold">Full Name</label>
+          <input id="lp_name" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Full name" />
+
+          <label class="text-sm font-semibold">Date of Birth</label>
+          <input id="lp_dob" type="date" class="w-full border p-3 rounded mt-1 mb-3" />
+
+          <label class="text-sm font-semibold">Mobile Number</label>
+          <input id="lp_mobile" class="w-full border p-3 rounded mt-1 mb-3" placeholder="9876543210" />
+
+          <div class="flex gap-3">
+            <button onclick="sendOtp('lp_mobile')" class="px-4 py-2 rounded bg-indigo-600 text-white">Send OTP (Demo)</button>
+            <button onclick="calculateLifePath(true)" class="px-4 py-2 rounded bg-orange-500 text-white">Calculate & Save</button>
+          </div>
+
+          <div id="otpBlock" class="mt-3 hidden">
+            <label class="text-sm font-semibold">Enter OTP</label>
+            <div class="flex items-center gap-2 mt-1">
+              <input id="otpInput" class="w-40 border p-2 rounded" placeholder="1234" />
+              <button onclick="verifyOtpAndShow()" class="px-3 py-2 rounded bg-emerald-500 text-white">Verify</button>
+            </div>
+            <div id="otpMsg" class="text-xs small-muted mt-2"></div>
+          </div>
+        </div>
+
+        <div id="lp_result" class="p-4 rounded-xl border small-muted"></div>
+      </div>
+      <p class="text-xs small-muted mt-3">To save results to Google Sheets: deploy the Apps Script web app and paste its URL into <code>GSHEET_ENDPOINT</code> below.</p>
+    </section>
+
+    <!-- LOVE -->
+    <section id="love" class="mb-10">
+      <div class="glass p-6 rounded-2xl shadow grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Love Connection Checker</h3>
+          <label class="text-sm font-semibold">Your Name</label>
+          <input id="love_you" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Your name" />
+
+          <label class="text-sm font-semibold">Partner Name</label>
+          <input id="love_partner" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Partner name" />
+
+          <label class="text-sm font-semibold">Your Mobile Number</label>
+          <input id="love_mobile" class="w-full border p-3 rounded mt-1 mb-3" placeholder="9876543210" />
+
+          <div class="flex gap-3">
+            <button onclick="checkLove(true)" class="px-4 py-2 rounded bg-rose-600 text-white">Check & Save</button>
+            <button onclick="openWhatsAppLead('love')" class="px-4 py-2 rounded border">Send to WhatsApp</button>
+          </div>
+        </div>
+
+        <div id="love_result" class="p-4 rounded-xl border small-muted"></div>
+      </div>
+    </section>
+
+    <!-- KUNDLI -->
+    <section id="kundli" class="mb-10">
+      <div class="glass p-6 rounded-2xl shadow grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Generate Kundli (Birth Chart)</h3>
+          <p class="small-muted mb-3">Collect name, birth date, time and place. Integrate an astrology engine for real chart generation in production.</p>
+
+          <label class="text-sm font-semibold">Full Name</label>
+          <input id="k_name" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Full name" />
+
+          <label class="text-sm font-semibold">Date of Birth</label>
+          <input id="k_dob" type="date" class="w-full border p-3 rounded mt-1 mb-3" />
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm font-semibold">Time of Birth</label>
+              <input id="k_tob" type="time" class="w-full border p-3 rounded mt-1 mb-3" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Place</label>
+              <input id="k_place" class="w-full border p-3 rounded mt-1 mb-3" placeholder="City, Country" />
+            </div>
+          </div>
+
+          <div class="flex gap-3">
+            <button onclick="generateKundli(true)" class="px-4 py-2 rounded bg-indigo-600 text-white">Generate & Save</button>
+            <button onclick="openWhatsAppLead('kundli')" class="px-4 py-2 rounded border">Send to WhatsApp</button>
+          </div>
+        </div>
+
+        <div id="kundli_result" class="p-4 rounded-xl border small-muted">Kundli preview will appear here after generation.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-12 text-center">
+      <h3 class="text-2xl font-bold mb-2">Contact & Custom Reports</h3>
+      <p class="small-muted mb-4">For PDFs, automations, or a full website build — WhatsApp us.</p>
+      <div class="flex items-center justify-center gap-3">
+        <button onclick="openWhatsAppLead('general')" class="px-6 py-3 rounded bg-green-600 text-white">WhatsApp Now</button>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center small-muted">© <span id="year"></span> Aura Ki Vibes</footer>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script>
+    // -------------------------
+    // CONFIG
+    // -------------------------
+    const GSHEET_ENDPOINT = ''; // <-- paste your Apps Script Web App URL here
+    const ADMIN_WHATSAPP_NUMBER = '919718299989'; // admin WhatsApp (international, no +)
+    const SMS_WEBHOOK = ''; // optional server-side SMS webhook
+
+    // UI init
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // helpers
+    function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+    function reduceToSingleDigit(num){ while(num>9) num = num.toString().split('').reduce((a,b)=>a+ +b,0); return num; }
+    function escapeHtml(s){ return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    // OTP demo
+    let _currentOtp = null, _otpTimeout = null;
+    const OTP_EXPIRY_MS = 3*60*1000;
+    function sendOtp(mobileFieldId){
+      const mobile = document.getElementById(mobileFieldId).value.trim();
+      if(!mobile || mobile.length < 8){ alert('Enter a valid mobile number'); return; }
+      _currentOtp = Math.floor(1000 + Math.random()*9000).toString();
+      document.getElementById('otpBlock').classList.remove('hidden');
+      document.getElementById('otpMsg').innerText = 'OTP (demo): ' + _currentOtp + ' — valid 3 minutes';
+      clearTimeout(_otpTimeout);
+      _otpTimeout = setTimeout(()=>{ _currentOtp = null; document.getElementById('otpMsg').innerText = 'OTP expired'; }, OTP_EXPIRY_MS);
+    }
+    function verifyOtpAndShow(){
+      const v = (document.getElementById('otpInput')||{}).value;
+      if(!v) return alert('Enter OTP');
+      if(_currentOtp && v === _currentOtp) document.getElementById('otpMsg').innerText = 'OTP verified — you can save results.';
+      else document.getElementById('otpMsg').innerText = 'Wrong or expired OTP.';
+    }
+
+    // Save to Google Sheets via Apps Script
+    async function saveToSheet(payload){
+      if(!GSHEET_ENDPOINT){ console.warn('GSHEET_ENDPOINT not set. Payload:', payload); return; }
+      try{
+        const resp = await fetch(GSHEET_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        const data = await resp.json();
+        console.log('Saved to sheet', data);
+      }catch(err){ console.error('Save failed', err); }
+    }
+
+    // Admin notifications: open wa.me and optional SMS webhook call
+    function notifyAdminViaWhatsApp(text){
+      if(!ADMIN_WHATSAPP_NUMBER) return;
+      const url = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=` + encodeURIComponent(text);
+      window.open(url, '_blank');
+    }
+    async function notifyAdminViaSms(text){
+      if(!SMS_WEBHOOK) return;
+      try{ await fetch(SMS_WEBHOOK, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({message:text}) }); }
+      catch(e){ console.error('SMS notify failed', e); }
+    }
+    function notifyAdmin(payload){
+      const lines = [];
+      lines.push(`New lead: ${payload.type} | ${new Date(payload.ts).toLocaleString()}`);
+      if(payload.name) lines.push(`Name: ${payload.name}`);
+      if(payload.a) lines.push(`Names: ${payload.a} & ${payload.b}`);
+      if(payload.mobile) lines.push(`Mobile: ${payload.mobile}`);
+      if(payload.message) lines.push(`Info: ${payload.message}`);
+      const text = lines.join('\\n');
+      notifyAdminViaWhatsApp(text);
+      notifyAdminViaSms(text);
+    }
+
+    // Life Path
+    const meanings = {1:"Leader • Independent • Initiator",2:"Diplomat • Harmonious • Supportive",3:"Creative • Expressive • Social",4:"Practical • Hardworking • Grounded",5:"Adventurous • Free • Curious",6:"Nurturing • Responsible • Family",7:"Introspective • Spiritual • Wise",8:"Ambitious • Executive • Wealth-focused",9:"Compassionate • Humanitarian • Wise"};
+    function calculateLifePath(shouldSave=false){
+      const name=document.getElementById('lp_name').value.trim();
+      const dob=document.getElementById('lp_dob').value;
+      const mobile=document.getElementById('lp_mobile').value.trim();
+      if(!dob) return alert('Please enter your date of birth');
+      const digits = dob.replace(/[^0-9]/g,'');
+      let sum = digits.split('').reduce((a,b)=>a+ +b,0);
+      const life = reduceToSingleDigit(sum);
+      document.getElementById('lp_result').innerHTML = `<h4 class='font-bold text-lg mb-2'>Life Path: ${life}</h4><p>${escapeHtml(meanings[life])}</p><div class='text-xs small-muted mt-3'>Name: ${escapeHtml(name)} • Mobile: ${escapeHtml(mobile)}</div>`;
+      const payload = { sheet:'life_path', type:'life_path', name, dob, mobile, life, message: meanings[life], ts: new Date().toISOString() };
+      if(shouldSave){ saveToSheet(payload); notifyAdmin(payload); }
+    }
+
+    // Love
+    function checkLove(shouldSave=false){
+      const a=document.getElementById('love_you').value.trim();
+      const b=document.getElementById('love_partner').value.trim();
+      const mobile=document.getElementById('love_mobile').value.trim();
+      if(!a||!b) return alert('Enter both names');
+      const score = reduceToSingleDigit(a.length+b.length);
+      const msgs={1:"Strong attraction — needs effort",2:"Romantic harmony",3:"Playful chemistry",4:"Stable partnership potential",5:"Exciting but changeable",6:"Deep emotional balance",7:"Soulful connection",8:"Powerful, goal-oriented couple",9:"Destiny-driven, spiritual bond"};
+      document.getElementById('love_result').innerHTML = `<h4 class='font-bold text-lg mb-2'>Love Score: ${score}/9</h4><p>${escapeHtml(msgs[score])}</p><div class='text-xs small-muted mt-2'>${escapeHtml(a)} & ${escapeHtml(b)} • ${escapeHtml(mobile)}</div>`;
+      const payload = { sheet:'love', type:'love', a,b,mobile,score,message: msgs[score], ts:new Date().toISOString() };
+      if(shouldSave){ saveToSheet(payload); notifyAdmin(payload); }
+    }
+
+    // Kundli stub
+    function generateKundli(shouldSave=false){
+      const name = document.getElementById('k_name').value.trim();
+      const dob = document.getElementById('k_dob').value;
+      const tob = document.getElementById('k_tob').value;
+      const place = document.getElementById('k_place').value.trim();
+      if(!dob || !tob) return alert('Enter date and time of birth');
+      const preview = `Kundli for ${name || 'Unknown'}\\nDOB: ${dob} ${tob} | Place: ${place}`;
+      document.getElementById('kundli_result').innerText = preview;
+      const payload = { sheet: 'kundli', type: 'kundli', name, dob, tob, place, ts: new Date().toISOString() };
+      if(shouldSave){ saveToSheet(payload); notifyAdmin(payload); }
+    }
+
+    // WhatsApp lead open
+    function openWhatsAppLead(type){
+      let text = 'Lead from Aura Ki Vibes - ' + type + ' | ' + new Date().toLocaleString() + '\\n';
+      if(type==='love'){ const a=document.getElementById('love_you').value.trim(); const b=document.getElementById('love_partner').value.trim(); const m=document.getElementById('love_mobile').value.trim(); text += `Names: ${a} & ${b} | Mobile: ${m}`; }
+      else if(type==='general'){ text += 'General enquiry'; }
+      else if(type==='kundli'){ const n=document.getElementById('k_name').value.trim(); const d=document.getElementById('k_dob').value; text += `Name: ${n} | DOB: ${d}`; }
+      const url = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=` + encodeURIComponent(text);
+      window.open(url,'_blank');
+    }
+
+    // small UX: enter key triggers (life path)
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Enter'){ const active=document.activeElement; if(['lp_name','lp_dob','lp_mobile'].includes(active.id)){ calculateLifePath(false); } } });
+  </script>
+
+  <!-- Apps Script: paste into a new Apps Script project (Code.gs), set your spreadsheet ID and deploy as Web App -->
+  <!--
+  function doPost(e){
+    try{
+      var payload = JSON.parse(e.postData.contents);
+      var ss = SpreadsheetApp.openById('PUT_YOUR_SPREADSHEET_ID_HERE');
+      var sheetName = payload.sheet || 'leads';
+      var sh = ss.getSheetByName(sheetName) || ss.insertSheet(sheetName);
+      if(sh.getLastRow()===0){
+        // create headers (excluding 'sheet')
+        var headers = Object.keys(payload).filter(function(k){ return k!=='sheet'; });
+        sh.appendRow(headers);
+      }
+      var headers = sh.getRange(1,1,1,sh.getLastColumn()).getValues()[0];
+      var row = headers.map(function(h){ return payload[h] || ''; });
+      sh.appendRow(row);
+      return ContentService.createTextOutput(JSON.stringify({success:true})).setMimeType(ContentService.MimeType.JSON);
+    }catch(err){
+      return ContentService.createTextOutput(JSON.stringify({success:false,err:err.message})).setMimeType(ContentService.MimeType.JSON);
+    }
+  }
+  -->
+
+</body>
+</html>
