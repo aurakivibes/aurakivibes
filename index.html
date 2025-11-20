@@ -1,149 +1,414 @@
-
-        'title' => 'Decoding Your Destiny: The Power of Numerology Number 7',
-        'excerpt' => 'The number 7 is the seeker, the thinker, the spiritual scientist. Learn how this powerful number influences your life path and aura.',
-        'date' => 'October 25, 2025',
-        'author' => 'Cosmic Jane',
-        'category' => 'Numerology',
-        'color' => 'indigo-500',
-    ],
-    [
-        'title' => 'A Beginner\'s Guide to Reading Your Own Natal Chart',
-        'excerpt' => 'Go beyond your sun sign! This guide breaks down the essential components of your birth chart: planets, houses, and aspects.',
-        'date' => 'October 18, 2025',
-        'author' => 'Aura Maven',
-        'category' => 'Astrology',
-        'color' => 'pink-500',
-    ],
-    [
-        'title' => 'What Does a Green Aura Really Mean?',
-        'excerpt' => 'Green is the color of healing and growth. Discover if you are a natural nurturer and how to cleanse a blocked green aura.',
-        'date' => 'October 10, 2025',
-        'author' => 'The Vibe Catcher',
-        'category' => 'Aura',
-        'color' => 'teal-500',
-    ],
-];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurakivibes - Cosmic Blog</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #e5e7eb;
-            background: #0d0517; /* Dark background */
-        }
-        .post-card {
-            background-color: #1a0a33; /* Dark purple base */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .post-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4); /* Purple glow on hover */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Ki Vibes – Numerology · Astrology · Aura</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- GSAP for small animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    /* subtle Indian mandala overlay */
+    .mandala-bg{ background-image: url('https://images.unsplash.com/photo-1536685206369-9e95d2c7b9d8?auto=format&fit=crop&w=1400&q=60'); background-blend-mode: overlay; }
+    .aura-preview { height: 84px; border-radius: 12px; }
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+  </style>
 </head>
-<body>
 
-    <!-- Mock WordPress Header (equivalent to get_header() in a real theme) -->
-    <header class="bg-black/90 border-b border-purple-800 sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-pink-400 tracking-wider">
-                Aurakivibes Blog
-            </h1>
-            <nav class="space-x-4">
-                <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300">Home</a>
-                <a href="#" class="text-gray-300 hover:text-pink-400 transition duration-300">About</a>
-                <?php // echo get_template_part('nav-menu'); // Example of PHP function ?>
-            </nav>
-        </div>
-    </header>
+<body class="mandala-bg bg-gradient-to-b from-amber-50 via-white to-rose-50 text-slate-900">
 
-    <!-- Main Content Wrapper -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- HEADER -->
+<header class="sticky top-0 z-40 glass border-b border-amber-100">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div id="logo" class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-500 to-rose-400 flex items-center justify-center text-white font-bold shadow-lg">AK</div>
+      <div>
+        <h1 class="text-lg font-extrabold">Aura Ki Vibes</h1>
+        <p class="text-xs text-slate-600">Numerology · Astrology · Aura</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm font-semibold">
+      <a href="#numerology" class="hover:text-rose-500">Life Path</a>
+      <a href="#love" class="hover:text-rose-500">Love Match</a>
+      <a href="#vibe" class="hover:text-rose-500">Current Vibe</a>
+      <a href="#astrology" class="hover:text-rose-500">Astrology</a>
+      <a href="#aura" class="hover:text-rose-500">Aura</a>
+      <a href="#contact" class="hover:text-rose-500">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <h2 class="text-5xl font-extrabold mb-10 text-center text-white">
-            Cosmic Insights
-        </h2>
+<main class="max-w-6xl mx-auto px-6 py-10">
+  <!-- HERO -->
+  <section class="grid md:grid-cols-2 gap-8 items-center mb-12">
+    <div data-aos="fade-right">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Discover Your Life Path, Aura & Cosmic Vibes</h2>
+      <p class="mt-4 text-slate-700 text-lg">A modern Indian taste numerology & astrology landing page with galaxy visuals, aura readings, love connection checker & vibe scanner.</p>
+      <div class="mt-6 flex gap-3">
+        <button onclick="scrollToSection('numerology')" class="px-6 py-3 rounded bg-rose-600 text-white font-semibold shadow hover:bg-rose-700">Start Free Reading</button>
+        <button onclick="scrollToSection('astrology')" class="px-6 py-3 rounded border">Explore Astrology</button>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">Tip: OTP is front-end only demo. To save results, connect a Google Apps Script web app (instructions below).</p>
+    </div>
 
-        <!-- WordPress Loop Area -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <?php
-            // The actual WordPress loop would look like this:
-            // if ( have_posts() ) : while ( have_posts() ) : the_post();
-            
-            // Using mock data for demonstration
-            foreach ($mock_posts as $post) :
-            ?>
+    <div data-aos="fade-left" class="rounded-3xl overflow-hidden shadow-xl border bg-white/60 p-3">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" class="w-full h-80 object-cover rounded-xl" />
+    </div>
+  </section>
 
-            <!-- Individual Post Card -->
-            <div class="post-card p-6 rounded-xl border border-purple-700/50">
-                <!-- Category Tag -->
-                <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-<?= $post['color']; ?>/20 text-<?= $post['color']; ?> mb-4">
-                    <?= $post['category']; ?>
-                </span>
+  <!-- LIFE PATH CALCULATOR + OTP + Save to Sheets -->
+  <section id="numerology" class="mb-12" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Life Path Calculator</h3>
+    <p class="text-slate-600 mb-6">Enter your Date of Birth & Mobile Number (mobile used for OTP demo & WhatsApp lead capture)</p>
 
-                <!-- Post Title (using the_title() in a real WP theme) -->
-                <h3 class="text-2xl font-bold mb-3 text-white hover:text-pink-400 transition duration-300 cursor-pointer">
-                    <!-- Example of a PHP dynamic link function -->
-                    <a href="<?php // echo get_permalink(); ?>">
-                        <?= $post['title']; ?>
-                    </a>
-                </h3>
+    <div class="bg-white/80 p-6 rounded-2xl shadow-lg grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="text-sm font-semibold">Full Name</label>
+        <input id="lp_name" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Your name" />
 
-                <!-- Post Excerpt (using the_excerpt() in a real WP theme) -->
-                <p class="text-gray-400 mb-4">
-                    <?= $post['excerpt']; ?>
-                </p>
+        <label class="text-sm font-semibold">Date of Birth</label>
+        <input id="lp_dob" type="date" class="w-full border p-3 rounded mt-1 mb-3" />
 
-                <!-- Post Meta Data -->
-                <div class="text-sm text-gray-500 flex justify-between items-center pt-2 border-t border-purple-900/50">
-                    <span>
-                        By <span class="text-indigo-300"><?= $post['author']; ?></span>
-                    </span>
-                    <span>
-                        <?= $post['date']; ?>
-                    </span>
-                </div>
-            </div>
+        <label class="text-sm font-semibold">Mobile Number</label>
+        <input id="lp_mobile" class="w-full border p-3 rounded mt-1 mb-3" placeholder="9876543210" />
 
-            <?php
-            endforeach;
-            // The actual WordPress loop termination:
-            // endwhile; endif;
-            ?>
-
-        </div>
-        <!-- End WordPress Loop Area -->
-
-        <!-- Pagination (Example structure) -->
-        <div class="flex justify-center mt-12 space-x-4">
-            <button class="px-5 py-2 rounded-full bg-gray-700 text-gray-400 cursor-not-allowed">
-                &larr; Previous
-            </button>
-            <button class="px-5 py-2 rounded-full bg-pink-600 text-white hover:bg-pink-700 transition duration-300">
-                Next &rarr;
-            </button>
-            <?php // echo paginate_links(); // Example of a PHP pagination function ?>
+        <div class="flex gap-3">
+          <button id="sendOtpBtn" onclick="sendOtp('lp_mobile')" class="px-6 py-3 rounded bg-indigo-600 text-white">Send OTP (Demo)</button>
+          <button onclick="calculateLifePath(true)" class="px-6 py-3 rounded bg-purple-600 text-white">Calculate & Save</button>
         </div>
 
-    </main>
-
-    <!-- Mock WordPress Footer (equivalent to get_footer() in a real theme) -->
-    <footer class="bg-black/90 border-t border-purple-800 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; <?php echo date('Y'); ?> Aurakivibes. Powered by WordPress.</p>
+        <div id="otpBlock" class="mt-3 hidden">
+          <label class="text-sm font-semibold">Enter OTP</label>
+          <input id="otpInput" class="w-40 border p-2 rounded mt-1" placeholder="1234" />
+          <button onclick="verifyOtpAndShow()" class="ml-2 px-3 py-2 rounded bg-emerald-500 text-white">Verify</button>
+          <div id="otpMsg" class="text-xs text-slate-600 mt-2"></div>
         </div>
-    </footer>
 
+      </div>
+
+      <div id="lp_result" class="p-4 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-xl border text-sm"></div>
+    </div>
+
+    <div class="mt-4 text-xs text-slate-600">Save to Google Sheets: enable the Apps Script Web App and paste its URL in the <code>GSHEET_ENDPOINT</code> constant in the script below.</div>
+  </section>
+
+  <!-- LOVE CHECKER -->
+  <section id="love" class="mb-12" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Love Connection Checker</h3>
+    <p class="text-slate-600 mb-6">Enter both names & your mobile number</p>
+
+    <div class="bg-white/80 p-6 rounded-2xl shadow-lg grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="text-sm font-semibold">Your Name</label>
+        <input id="love_you" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Your name" />
+
+        <label class="text-sm font-semibold">Partner Name</label>
+        <input id="love_partner" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Partner name" />
+
+        <label class="text-sm font-semibold">Your Mobile Number</label>
+        <input id="love_mobile" class="w-full border p-3 rounded mt-1 mb-3" placeholder="9876543210" />
+
+        <div class="flex gap-3">
+          <button onclick="checkLove(true)" class="px-6 py-3 rounded bg-rose-600 text-white">Check & Save</button>
+          <button onclick="openWhatsAppLead('love')" class="px-6 py-3 rounded border">Send to WhatsApp</button>
+        </div>
+      </div>
+
+      <div id="love_result" class="p-4 bg-gradient-to-br from-rose-50 to-purple-100 rounded-xl border text-sm"></div>
+    </div>
+  </section>
+
+  <!-- VIBE CHECKER + Aura Color Detector -->
+  <section id="vibe" class="mb-12" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Current Vibe + Aura Color Detector</h3>
+    <p class="text-slate-600 mb-6">Your name + mobile number = today's energy. Also upload an image to detect dominant aura color.</p>
+
+    <div class="bg-white/80 p-6 rounded-2xl shadow-lg grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="text-sm font-semibold">Your Name</label>
+        <input id="vibe_name" class="w-full border p-3 rounded mt-1 mb-3" placeholder="Enter name" />
+
+        <label class="text-sm font-semibold">Mobile Number</label>
+        <input id="vibe_mobile" class="w-full border p-3 rounded mt-1 mb-3" placeholder="9876543210" />
+
+        <div class="flex gap-3">
+          <button onclick="checkVibe(true)" class="px-6 py-3 rounded bg-amber-600 text-white">Check & Save</button>
+          <button onclick="openWhatsAppLead('vibe')" class="px-6 py-3 rounded border">WhatsApp Lead</button>
+        </div>
+
+        <hr class="my-4" />
+
+        <label class="text-sm font-semibold">Upload image for Aura color</label>
+        <input id="aura_img" type="file" accept="image/*" class="w-full mt-2 mb-3" onchange="detectAuraColor(event)" />
+        <canvas id="aura_canvas" class="hidden"></canvas>
+        <div class="mt-2 flex items-center gap-3">
+          <div id="aura_color_box" class="aura-preview border"></div>
+          <div id="aura_color_name" class="text-sm"></div>
+        </div>
+      </div>
+
+      <div id="vibe_result" class="p-4 bg-gradient-to-br from-purple-50 to-rose-100 rounded-xl border text-sm"></div>
+    </div>
+  </section>
+
+  <!-- ASTROLOGY CARDS -->
+  <section id="astrology" class="mb-12" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Astrology — Quick Cards</h3>
+    <p class="text-slate-600 mb-6">Simple Rashi (zodiac) cards with short advice. Add birth-time charts later for full reports.</p>
+
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="p-4 rounded-2xl bg-white/80 shadow" data-aos="zoom-in">
+        <div class="font-semibold">Aries</div>
+        <div class="text-sm text-slate-600 mt-2">Confidence & action. Good days for new starts.</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/80 shadow" data-aos="zoom-in" data-aos-delay="100">
+        <div class="font-semibold">Taurus</div>
+        <div class="text-sm text-slate-600 mt-2">Steady progress. Focus on finances.</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/80 shadow" data-aos="zoom-in" data-aos-delay="200">
+        <div class="font-semibold">Gemini</div>
+        <div class="text-sm text-slate-600 mt-2">Communication & networking energy.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AURA GALLERY (ENHANCED) -->
+  <section id="aura" class="mb-12" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Aura Gallery</h3>
+    <p class="text-slate-600 mb-6">Modern galaxies + Indian mandala feel — use these as hero images or backgrounds.</p>
+
+    <div class="grid sm:grid-cols-3 gap-4">
+      <img class="rounded-xl shadow" src="https://images.unsplash.com/photo-1526147841269-88c11d8b3c4a?auto=format&fit=crop&w=600&q=80" />
+      <img class="rounded-xl shadow" src="https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&w=600&q=80" />
+      <img class="rounded-xl shadow" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" />
+    </div>
+  </section>
+
+  <!-- CONTACT & WHATSAPP -->
+  <section id="contact" class="mb-12 text-center" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-2">Contact Us</h3>
+    <p class="text-slate-600 mb-6">For custom reports, branding or full website</p>
+    <div class="flex items-center justify-center gap-3">
+      <button onclick="openWhatsAppLead('general')" class="px-6 py-3 rounded bg-green-600 text-white">WhatsApp Now</button>
+      <a href="#" class="px-6 py-3 rounded border">Email</a>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-slate-600">© 2025 Aura Ki Vibes</footer>
+</main>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ once: true, duration: 700 });
+// small logo animation
+gsap.from('#logo', { scale: 0.8, duration: 1.2, ease: 'elastic.out(1, 0.6)' });
+
+function scrollToSection(id) { document.getElementById(id).scrollIntoView({behavior: 'smooth'}); }
+
+// ----- OTP (front-end demo only) -----
+let _currentOtp = null;
+const OTP_EXPIRY_MS = 3 * 60 * 1000; // 3 minutes
+let _otpTimeout = null;
+
+function sendOtp(mobileFieldId) {
+  const mobile = document.getElementById(mobileFieldId).value.trim();
+  if (!mobile || mobile.length < 8) { alert('Enter valid mobile number'); return; }
+  _currentOtp = Math.floor(1000 + Math.random()*9000).toString();
+  document.getElementById('otpBlock').classList.remove('hidden');
+  document.getElementById('otpMsg').innerText = `OTP sent (demo): ${_currentOtp} — expires in 3 minutes`;
+  clearTimeout(_otpTimeout);
+  _otpTimeout = setTimeout(()=> { _currentOtp = null; document.getElementById('otpMsg').innerText = 'OTP expired'; }, OTP_EXPIRY_MS);
+}
+
+function verifyOtpAndShow() {
+  const val = document.getElementById('otpInput').value.trim();
+  if (!val) return alert('Enter OTP');
+  if (_currentOtp && val === _currentOtp) {
+    document.getElementById('otpMsg').innerText = 'OTP verified — you may now view/save results.';
+    // optionally remove OTP UI
+  } else {
+    document.getElementById('otpMsg').innerText = 'Wrong OTP or expired.';
+  }
+}
+
+// ----- Utility: reduce to single digit -----
+function reduceToSingleDigit(num) {
+  while (num > 9) num = num.toString().split('').reduce((a,b)=>a+ +b,0);
+  return num;
+}
+
+// ----- Life Path calculation + optional save to Google Sheets -----
+const GSHEET_ENDPOINT = ''; // <-- paste your Apps Script Web App URL here to save results
+
+function calculateLifePath(shouldSave=false) {
+  const name = document.getElementById('lp_name').value.trim();
+  const dob = document.getElementById('lp_dob').value;
+  const mobile = document.getElementById('lp_mobile').value.trim();
+  if (!dob) return alert('Enter your DOB');
+  const digits = dob.replace(/[^0-9]/g, '');
+  let sum = digits.split('').reduce((a,b)=>a+ +b,0);
+  const lifePath = reduceToSingleDigit(sum);
+  const meanings = {
+    1:"Leader • Energy of Independence • Strong Will",
+    2:"Peaceful • Emotional Balance • Soft Energy",
+    3:"Creative • Fun • Expressive • Communication Power",
+    4:"Hardworking • Practical • Stability Vibes",
+    5:"Adventure • Change • Fast Vibes",
+    6:"Family • Love • Harmony",
+    7:"Spiritual • Deep Thinking • Inner Wisdom",
+    8:"Money • Power • Business Mind",
+    9:"Humanitarian • Emotional Strength • Universal Love"
+  };
+  document.getElementById('lp_result').innerHTML = `<h4 class='font-bold text-lg mb-2'>Your Life Path Number: ${lifePath}</h4><p>${meanings[lifePath]}</p><div class='text-xs mt-3 text-slate-600'>Name: ${escapeHtml(name)} • Mobile: ${escapeHtml(mobile)}</div>`;
+
+  if (shouldSave) {
+    const payload = { type: 'life_path', name, dob, mobile, lifePath, message: meanings[lifePath], ts: new Date().toISOString() };
+    saveToSheet(payload);
+  }
+}
+
+// ----- Love checker -----
+function checkLove(shouldSave=false) {
+  const a = document.getElementById('love_you').value.trim();
+  const b = document.getElementById('love_partner').value.trim();
+  const mobile = document.getElementById('love_mobile').value.trim();
+  if (!a || !b) return alert('Enter both names');
+  const score = reduceToSingleDigit(a.length + b.length);
+  const msgs = {
+    1:"Strong Attraction but needs effort.",
+    2:"Very romantic connection.",
+    3:"Fun, playful chemistry.",
+    4:"Stable, long-term potential.",
+    5:"Exciting but unpredictable.",
+    6:"Perfect emotional balance.",
+    7:"Deep soulmate vibes.",
+    8:"Power couple energy.",
+    9:"Spiritual and destiny-driven love."
+  };
+  document.getElementById('love_result').innerHTML = `<h4 class='font-bold text-lg mb-2'>Love Score: ${score}/9</h4><p>${msgs[score]}</p><div class='text-xs mt-2'>Names: ${escapeHtml(a)} & ${escapeHtml(b)} • Mobile: ${escapeHtml(mobile)}</div>`;
+  if (shouldSave) saveToSheet({type:'love', a, b, mobile, score, message: msgs[score], ts: new Date().toISOString()});
+}
+
+// ----- Vibe checker -----
+function checkVibe(shouldSave=false) {
+  const name = document.getElementById('vibe_name').value.trim();
+  const mobile = document.getElementById('vibe_mobile').value.trim();
+  if (!name) return alert('Enter name');
+  const today = new Date().getDate();
+  const vibe = reduceToSingleDigit(name.length + today);
+  const msgs = {
+    1:"High confidence day.",
+    2:"Calm & emotional clarity.",
+    3:"Creativity overflow.",
+    4:"Work focus strong.",
+    5:"Adventure or sudden change.",
+    6:"Love & harmony.",
+    7:"Meditation recommended.",
+    8:"Financial growth energy.",
+    9:"Giving & kindness day."
+  };
+  document.getElementById('vibe_result').innerHTML = `<h4 class='font-bold text-lg mb-2'>Today's Vibe: ${vibe}</h4><p>${msgs[vibe]}</p><div class='text-xs mt-2'>Name: ${escapeHtml(name)} • Mobile: ${escapeHtml(mobile)}</div>`;
+  if (shouldSave) saveToSheet({type:'vibe', name, mobile, vibe, message: msgs[vibe], ts: new Date().toISOString()});
+}
+
+// ----- Aura color detection (simple average color) -----
+function detectAuraColor(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => {
+    const canvas = document.getElementById('aura_canvas');
+    const ctx = canvas.getContext('2d');
+    const w = 200, h = 200; canvas.width = w; canvas.height = h;
+    // draw at reduced size for speed
+    ctx.drawImage(img, 0, 0, w, h);
+    const data = ctx.getImageData(0,0,w,h).data;
+    let r=0,g=0,b=0,count=0;
+    for (let i=0;i<data.length;i+=4){ r+=data[i]; g+=data[i+1]; b+=data[i+2]; count++; }
+    r=Math.round(r/count); g=Math.round(g/count); b=Math.round(b/count);
+    const hex = rgbToHex(r,g,b);
+    document.getElementById('aura_color_box').style.background = hex;
+    document.getElementById('aura_color_name').innerText = mapColorToAuraName(r,g,b) + ` (${hex})`;
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+}
+
+function rgbToHex(r,g,b){ return '#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join(''); }
+
+function mapColorToAuraName(r,g,b){
+  // very simple mapping by dominant channel — tweak as needed
+  if (r>g && r>b) return 'Saffron-Glow (Warm & Creative)';
+  if (g>r && g>b) return 'Emerald-Calm (Grounded)';
+  if (b>r && b>g) return 'Lotus-Blue (Calm & Spiritual)';
+  const avg = (r+g+b)/3;
+  if (avg>200) return 'Radiant-White (Bright & Open)';
+  return 'Balanced Aura';
+}
+
+// ----- Save to Google Sheets via Apps Script Web App -----
+function saveToSheet(payload){
+  if (!GSHEET_ENDPOINT) { console.log('GSHEET_ENDPOINT empty — not saving. Payload:', payload); alert('To save results, paste your Apps Script Web App URL into the code.'); return; }
+  fetch(GSHEET_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+    .then(r=>r.json()).then(res=>{ console.log('Saved:', res); alert('Saved to sheet'); }).catch(err=>{ console.error(err); alert('Failed to save — check console and endpoint'); });
+}
+
+// ----- WhatsApp lead capture (opens wa.me link) -----
+const WHATSAPP_NUMBER = '919999999999'; // replace with your number (countrycode+number, no +)
+function openWhatsAppLead(type){
+  let text = 'Lead from Aura Ki Vibes - ' + type + ' | ' + new Date().toLocaleString() + '
+';
+  if (type==='love') {
+    const a = document.getElementById('love_you').value.trim();
+    const b = document.getElementById('love_partner').value.trim();
+    const m = document.getElementById('love_mobile').value.trim();
+    text += `Names: ${a} & ${b} | Mobile: ${m}`;
+  } else if (type==='vibe'){
+    const n = document.getElementById('vibe_name').value.trim();
+    const m = document.getElementById('vibe_mobile').value.trim();
+    text += `Name: ${n} | Mobile: ${m}`;
+  } else if (type==='general'){
+    text += 'General enquiry';
+  } else if (type==='life'){
+    text += 'Life path lead';
+  }
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=`+encodeURIComponent(text);
+  window.open(url, '_blank');
+}
+
+// ----- Helpers -----
+function escapeHtml(s){ if(!s) return ''; return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ------------------ NOTES FOR DEPLOYING Google Sheets saving ------------------
+1) Open Google Sheets -> Extensions -> Apps Script
+2) Create a new script and paste this minimal code:
+
+function doPost(e){
+  try{
+    const data = JSON.parse(e.postData.contents);
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const sh = ss.getSheetByName('Leads') || ss.insertSheet('Leads');
+    sh.appendRow([new Date(), data.type || '', data.name || '', data.mobile || '', JSON.stringify(data)]);
+    return ContentService.createTextOutput(JSON.stringify({status:'ok'})).setMimeType(ContentService.MimeType.JSON);
+  }catch(err){
+    return ContentService.createTextOutput(JSON.stringify({status:'error', error:err.toString()})).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+3) Deploy -> New deployment -> Select "Web app" -> Execute as: Me -> Who has access: Anyone
+4) Copy the Web app URL and paste into GSHEET_ENDPOINT in this file.
+
+Security note: This simple flow is fine for low-risk leads. For production, add validation, quotas and server-side checks.
+*/
+
+</script>
 </body>
 </html>
