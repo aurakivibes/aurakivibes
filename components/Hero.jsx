@@ -68,7 +68,7 @@ export default function Hero(){
       </section>
 
       {/* subtle paper overlay for warmth (uses public/images/paper-texture.png) */}
-      <div className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-30" style={{backgroundImage:'url(/images/paper-texture.jpg)', backgroundSize:'cover'}} />
+      <div className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-30" style={{backgroundImage:'url(/images/paper-texture.png)', backgroundSize:'cover'}} />
     </header>
   )
 }
