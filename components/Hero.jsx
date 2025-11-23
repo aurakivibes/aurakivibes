@@ -8,9 +8,9 @@ export default function Hero(){
           <div className="space-y-6">
             <p className="text-sm font-medium text-textMuted">Our Astrologers · About · Blog · Contact</p>
             <h1 className="text-5xl md:text-6xl font-heading leading-tight text-textPrimary">
-              Foresight<br/>
+             AURA KI VIBES<br/>
               <span className="text-5xl md:text-6xl font-heading">
-                Done <span className="text-antiqueGold">Right.</span>
+                AURA KI VIBES <span className="text-antiqueGold">AURA KI VIBES.</span>
               </span>
             </h1>
             <p className="max-w-xl text-lg text-textMuted">
