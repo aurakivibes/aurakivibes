@@ -26,11 +26,11 @@ export default function Hero(){
           <div className="space-y-6">
             <p className="text-sm" style={{color:'var(--textMuted)'}}>Our Astrologers · About · Blog · Contact</p>
 
-            <h1 className="hero-headline font-heading" style={{fontFamily:'Playfair Display, serif', color:'var(--textPrimary)'}}>
+            <h1 className="hero-headline">
               Aura Ki Vibes
               <br />
-              <span style={{fontFamily:'Playfair Display, serif'}}>
-                Readings <span className="font-script" style={{color:'var(--antiqueGold)', fontSize:'1.1em'}}>Done</span> Right.
+              <span>
+                Readings <span className="font-script" style={{color:'var(--antiqueGold)', fontSize:'1.08em'}}>Done</span> Right.
               </span>
             </h1>
 
@@ -55,19 +55,18 @@ export default function Hero(){
             </div>
           </div>
 
-          {/* Right column: decorative sun image positioned large and slightly overlapping */}
+          {/* Right column: decorative sun image */}
           <div className="relative flex items-center justify-center lg:justify-end">
             <div className="w-full max-w-md lg:mr-8">
-              {/* PRODUCTION: use /images/hero-sun.png (place your uploaded image here) */}
-              <Image src={'/images/hero-sun.png'} alt="decorative sun" width={720} height={720} className="object-contain" />
-              {/* TEMP TEST (local path you uploaded): '/mnt/data/04d6050b-2224-48ac-8c78-e907121a3e58.png' */}
+              {/* Make sure the file exists at public/images/hero-sun.png */}
+              <Image src="/images/hero-sun.png" alt="decorative sun" width={720} height={720} className="object-contain" />
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* subtle paper overlay for warmth (uses public/images/paper-texture.png) */}
+      {/* paper texture overlay (uses public/images/paper-texture.png) */}
       <div className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-30" style={{backgroundImage:'url(/images/paper-texture.png)', backgroundSize:'cover'}} />
     </header>
   )
