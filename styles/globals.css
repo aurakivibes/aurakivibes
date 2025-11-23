@@ -8,7 +8,7 @@
   --textMuted: #6B5B4B;
 }
 
-/* page background: parchment color + repeating paper texture */
+/* page background: parchment color + paper texture */
 html,body,#__next{height:100%;}
 body{
   margin:0;
@@ -16,30 +16,41 @@ body{
   color:var(--textPrimary);
 
   background-color: var(--bg);
-  /* use the texture file you uploaded into public/images */
   background-image: url('/images/paper-texture.png');
   background-repeat: repeat;
   background-size: auto;
+
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* small helper for script/gold word */
+/* script font for the golden word */
 .font-script { font-family: 'Great Vibes', cursive; }
 
-/* container helper */
-.container { max-width: 1200px; margin-left:auto; margin-right:auto; padding-left:1.5rem; padding-right:1.5rem; }
+/* container width */
+.container {
+  max-width: 1200px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
-/* Hero headline sizes */
-.hero-headline { line-height: 1; font-family: 'Playfair Display', serif; }
-@media (min-width:1024px){ .hero-headline { font-size: 64px; } }
-@media (max-width:1023px){ .hero-headline { font-size: 40px; } }
+/* hero font styling */
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
 
-/* soft shadow used on buttons/cards */
-.shadow-soft { box-shadow: 0 6px 24px rgba(16,24,40,0.08); }
+@media (min-width:1024px){
+  .hero-headline { font-size: 64px; }
+}
 
-/* small responsive spacing helpers */
-@media (max-width:640px) {
-  .container { padding-left: 1rem; padding-right: 1rem; }
-  .hero-headline { font-size: 34px; }
+@media (max-width:1023px){
+  .hero-headline { font-size: 40px; }
+}
+
+/* soft button shadow */
+.shadow-soft {
+  box-shadow: 0 6px 24px rgba(16,24,40,0.08);
 }
