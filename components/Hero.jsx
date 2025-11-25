@@ -54,11 +54,9 @@ export default function Hero(){
           {/* Right column (sun image) */}
           <div className="hero-right">
             <div className="sun-wrap">
-              {/* Production path (GitHub/Vercel): /images/hero-sun.png
-                  Local/test session path (used here): use the file path below */}
               <Image
                 src="/mnt/data/A_vintage-style_celestial_illustration_of_the_sun_.png"
-                alt="decorative sun"
+                alt="hero-sun.png"
                 width={820}
                 height={820}
                 className="object-contain"
