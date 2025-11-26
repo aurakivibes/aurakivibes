@@ -8,7 +8,7 @@ export default function Hero() {
       style={{
         backgroundImage: "url('/images/hero-sun.png')",   // your file
         backgroundSize: "70%",                            // << 40% SIZE APPLIED
-        backgroundPosition: "right center",
+        backgroundPosition: "right upper",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",                               // full hero height
