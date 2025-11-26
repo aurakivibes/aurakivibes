@@ -6,10 +6,10 @@ export default function Hero() {
     <header
       className="relative overflow-hidden"
       style={{
-        backgroundImage: "url('/images/hero-sun.png')",   // your file
-        backgroundSize: "70%",                            // << 40% SIZE APPLIED
-        backgroundPosition: "right upper",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: "url('/images/hero-sun.png')",
+backgroundSize: "40%",
+backgroundPosition: "110% 40%",  // << X% Y%
+backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",                               // full hero height
         display: "flex",
