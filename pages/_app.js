@@ -1,2 +1,10 @@
-import '../styles/globals.css'
-export default function App({Component,pageProps}){return <Component {...pageProps}/> }
+// app/page.js
+import Hero from '../components/Hero'
+
+export default function Page() {
+  return (
+    <main>
+      <Hero />
+    </main>
+  )
+}
