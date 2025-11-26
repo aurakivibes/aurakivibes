@@ -1,89 +1,105 @@
-
+// components/Hero.jsx
+import Link from "next/link"
 
 export default function Hero() {
   return (
-    <header className="hero-bg relative overflow-hidden">
-      {/* Top Nav */}
-      <nav className="container py-4 md:py-6 flex items-center justify-between">
+    <header
+      className="relative overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/hero-sun.png')",   // your file
+        backgroundSize: "40%",                            // << 40% SIZE APPLIED
+        backgroundPosition: "right center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#f5ebd8",
+        minHeight: "100vh",                               // full hero height
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+
+      {/* =========== TOP NAV =========== */}
+      <nav className="container py-5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="logo-mark">A</div>
-          <div className="font-medium text-sm md:text-base">Aura Ki Vibes</div>
+          <div className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center font-bold text-lg">A</div>
+          <span className="font-medium text-base">Aura Ki Vibes</span>
         </div>
 
-        <div className="hidden md:flex items-center gap-4 text-xs md:text-sm">
-          <Link href="#astrologers">
-            <a style={{ color: 'var(--textMuted)' }}>Our Astrologers</a>
-          </Link>
-          <Link href="#about">
-            <a style={{ color: 'var(--textMuted)' }}>About</a>
-          </Link>
-          <Link href="#blog">
-            <a style={{ color: 'var(--textMuted)' }}>Blog</a>
-          </Link>
-          <Link href="#contact">
-            <a style={{ color: 'var(--textMuted)' }}>Contact</a>
-          </Link>
+        <div className="hidden md:flex gap-6 text-sm">
+          <Link href="#about"><span className="cursor-pointer text-gray-600">About</span></Link>
+          <Link href="#blog"><span className="cursor-pointer text-gray-600">Blog</span></Link>
+          <Link href="#astrologers"><span className="cursor-pointer text-gray-600">Astrologers</span></Link>
+          <Link href="#contact"><span className="cursor-pointer text-gray-600">Contact</span></Link>
 
-          <button className="btn-outline-gold ml-2">
+          <button
+            className="ml-2 px-5 py-2 rounded-full font-semibold"
+            style={{ border: "2px solid #D4AF37", background: "#fff" }}
+          >
             Login / Register
           </button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="container py-10 md:py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* LEFT – text only, image is background now */}
-          <div className="space-y-6 max-w-xl">
-            <p className="text-xs md:text-sm" style={{ color: 'var(--textMuted)' }}>
-              Our Astrologers · About · Blog · Contact
-            </p>
 
-            <h1 className="hero-headline leading-tight">
-              Aura Ki Vibes
-              <br />
-              <span>
-                Readings{' '}
-                <span className="font-script" style={{ color: 'var(--antiqueGold)' }}>
-                  Done
-                </span>{' '}
-                Right.
-              </span>
-            </h1>
 
-            <p className="hero-lead text-sm md:text-base">
-              Detailed natal charts, daily guidance and trusted astrologers — all presented
-              with a warm, elegant feel.
-            </p>
+      {/* =========== HERO LEFT SECTION =========== */}
+      <section className="container flex items-center lg:min-height-[80vh] py-16">
+        <div className="max-w-xl space-y-6">
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#astrologers" className="btn-primary text-sm md:text-base text-center">
-                View Our Specialist astrologers
-              </a>
-              <a
-                href="#contact"
-                className="btn-outline-gold text-sm md:text-base text-center"
-                style={{ paddingInline: '18px', paddingBlock: '10px' }}
-              >
-                Contact / Verify
-              </a>
-            </div>
+          {/* TITLE */}
+          <h1 style={{
+            fontFamily: "Playfair Display, serif",
+            fontSize: "3rem",
+            fontWeight: 700,
+            lineHeight: "1.1"
+          }}>
+            Aura Ki Vibes <br/>
+            <span>
+              Readings <span
+                style={{
+                  fontFamily: "'Great Vibes', cursive",
+                  color: "#D4AF37",
+                  fontSize: "1.3em"
+                }}
+              >Done</span> Right.
+            </span>
+          </h1>
 
-            <div className="flex gap-3 mt-2" aria-hidden>
-              <div className="icon-circle text-xs md:text-sm">IG</div>
-              <div className="icon-circle text-xs md:text-sm">FB</div>
-              <div className="icon-circle text-xs md:text-sm">TW</div>
-            </div>
+          {/* SUBLINE */}
+          <p className="text-[15px] text-gray-600 leading-relaxed max-w-md">
+            Receive personal guidance and explore cosmic insights with clarity,
+            intuition and spiritual connection.
+          </p>
 
-            <p className="text-[11px] md:text-xs" style={{ color: 'var(--textMuted)' }}>
-              100% private & confidential · Guidance via WhatsApp & calls
-            </p>
+          {/* CALL TO ACTION BUTTONS */}
+          <div className="flex gap-4 flex-wrap pt-2">
+            <a
+              href="#astrologers"
+              className="px-6 py-3 rounded-full font-semibold text-white"
+              style={{ background: "#000" }}
+            >
+              View Astrologers
+            </a>
+
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-full font-semibold"
+              style={{ border: "2px solid #D4AF37", background: "#fff", color: "#222" }}
+            >
+              Contact / Verify
+            </a>
           </div>
 
-          {/* RIGHT COLUMN now empty – background image covers area */}
-          <div className="hidden lg:block" />
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-3 pt-4 text-sm">
+            <div className="w-9 h-9 rounded-full bg-white shadow flex items-center justify-center">IG</div>
+            <div className="w-9 h-9 rounded-full bg-white shadow flex items-center justify-center">FB</div>
+            <div className="w-9 h-9 rounded-full bg-white shadow flex items-center justify-center">TW</div>
+          </div>
+
+          <p className="text-xs text-gray-500 pt-3">Private guidance via WhatsApp · Call Sessions Available</p>
         </div>
       </section>
+
     </header>
-  )
+  );
 }
