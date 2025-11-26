@@ -1,9 +1,8 @@
-// components/Hero.jsx
-import Link from 'next/link'
+
 
 export default function Hero() {
   return (
-    <header className="relative overflow-hidden bg-[#f5ebd8]">
+    <header className="hero-bg relative overflow-hidden">
       {/* Top Nav */}
       <nav className="container py-4 md:py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -34,7 +33,7 @@ export default function Hero() {
       {/* Hero Section */}
       <section className="container py-10 md:py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* LEFT – text */}
+          {/* LEFT – text only, image is background now */}
           <div className="space-y-6 max-w-xl">
             <p className="text-xs md:text-sm" style={{ color: 'var(--textMuted)' }}>
               Our Astrologers · About · Blog · Contact
@@ -75,16 +74,14 @@ export default function Hero() {
               <div className="icon-circle text-xs md:text-sm">FB</div>
               <div className="icon-circle text-xs md:text-sm">TW</div>
             </div>
+
+            <p className="text-[11px] md:text-xs" style={{ color: 'var(--textMuted)' }}>
+              100% private & confidential · Guidance via WhatsApp & calls
+            </p>
           </div>
 
-          {/* RIGHT – IMAGE DIRECTLY */}
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src="/images/hero-sun.png"
-              alt="Aura hero"
-              className="max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg object-contain"
-            />
-          </div>
+          {/* RIGHT COLUMN now empty – background image covers area */}
+          <div className="hidden lg:block" />
         </div>
       </section>
     </header>
