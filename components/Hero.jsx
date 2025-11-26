@@ -7,8 +7,8 @@ export default function Hero() {
       className="overflow-hidden flex flex-col"
       style={{
         backgroundImage: "url('/images/hero-sun.png')",
-        backgroundSize: "40%",
-        backgroundPosition: "110% 45%",
+        backgroundSize: "70%",
+        backgroundPosition: "100% 5%",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",
@@ -36,7 +36,7 @@ export default function Hero() {
             animation: "glowPulse 4s infinite alternate ease-in-out", // animated aura glow
           }}
         >
-          A
+          Aura
         </div>
 
         {/* Brand Name */}
