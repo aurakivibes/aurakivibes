@@ -1,2 +1,12 @@
+// pages/index.js
+import Head from 'next/head'
 import Hero from '../components/Hero'
-export default function Home(){return(<div><Hero/></div>)}
+
+export default function Home() {
+  return (
+    <>
+      <Head><title>Aura Ki Vibes</title></Head>
+      <Hero />
+    </>
+  )
+}
