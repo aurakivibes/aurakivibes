@@ -23,10 +23,10 @@ html, body {
 /* ============================
    HERO BACKGROUND — FULL WIDTH
 ============================ */
-.hero-bg {
+.hero-sun {
   width: 100%;
   min-height: 100vh; /* full screen hero */
-  background-image: url('/images/hero-sun.png'); /* your aura/mandala artwork */
+  background-image: (images/hero-sun.png') /* your aura/mandala artwork */
   background-repeat: no-repeat;
   background-size: cover;   /* fills entire area */
   background-position: right center;
