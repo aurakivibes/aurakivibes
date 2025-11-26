@@ -7,8 +7,8 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{
         backgroundImage: "url('/images/hero-sun.png')",
-backgroundSize: "40%",
-backgroundPosition: "110% 40%",  // << X% Y%
+backgroundSize: "70%",
+backgroundPosition: "100% 20%",  // << X% Y%
 backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",                               // full hero height
