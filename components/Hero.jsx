@@ -80,7 +80,7 @@ export default function Hero() {
           {/* RIGHT – IMAGE DIRECTLY */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/images/hero-bg.png"
+              src="/images/hero-sun.png"
               alt="Aura hero"
               className="max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg object-contain"
             />
