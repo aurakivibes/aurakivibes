@@ -8,7 +8,7 @@ export default function Hero() {
       style={{
         backgroundImage: "url('/images/hero-sun.png')",
         backgroundSize: "40%",
-        backgroundPosition: "100% 45%",
+        backgroundPosition: "120% 45%",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",
@@ -65,18 +65,18 @@ export default function Hero() {
         </h1>
       </div>
 
-      {/* HERO: vertically centered left column */}
+      {/* HERO CONTENT: left column centered vertically */}
       <section
         className="container"
         style={{
           display: "flex",
-          alignItems: "center",      // <-- vertical centering
+          alignItems: "center", // vertical centering
           minHeight: "85vh",
-          paddingTop: "120px",       // safe space so content sits below fixed logo
+          paddingTop: "120px", // keeps content below fixed logo
           paddingBottom: "40px",
         }}
       >
-        <div style={{ maxWidth: 680 }}>
+        <div style={{ maxWidth: 680, position: "relative" }}>
           {/* ambient glow behind heading */}
           <div
             style={{
@@ -96,7 +96,7 @@ export default function Hero() {
             aria-hidden
           />
 
-          {/* particles (kept simple) */}
+          {/* particles (optional, intentionally subtle) */}
           <div
             aria-hidden
             style={{
@@ -107,7 +107,6 @@ export default function Hero() {
               height: 300,
               zIndex: 2,
               pointerEvents: "none",
-              display: "none", /* hide by default for CSS-controlled playback below */
             }}
             className="particles"
           >
@@ -119,7 +118,7 @@ export default function Hero() {
             <span className="p p6" />
           </div>
 
-          {/* ===== Heading & copy (centered vertically) ===== */}
+          {/* ===== Heading & copy ===== */}
           <h2
             style={{
               fontFamily: "Playfair Display, serif",
@@ -164,34 +163,53 @@ export default function Hero() {
             shaping your life right now — with clarity and accuracy guided by true astrology.
           </p>
 
+          {/* CTA AREA */}
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-          
-<a
-  href="#book"
-  style={{
-    background: "#D4AF37",
-    color: "#000",
-    padding: "12px 26px",
-    borderRadius: 999,
-    fontWeight: 700,
-    display: "inline-block",
-    marginTop: "16px",
-    boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
-    textDecoration: "none",
-    letterSpacing: "0.3px"
-  }}
->
-  Your First 111 Reading is Free
-</a>
+            <a
+              href="#astrologers"
+              style={{
+                marginRight: 12,
+                background: "#000",
+                color: "#fff",
+                padding: "12px 22px",
+                borderRadius: 999,
+                fontWeight: 700,
+                textDecoration: "none",
+                display: "inline-block",
+              }}
+            >
+              View Astrologers
+            </a>
 
-      {/* Inline styles for animation + responsive tweaks */}
+            {/* Numerology CTA — Gold filled */}
+            <a
+              href="#book"
+              style={{
+                background: "#D4AF37",
+                color: "#000",
+                padding: "12px 26px",
+                borderRadius: 999,
+                fontWeight: 700,
+                display: "inline-block",
+                marginTop: "0",
+                boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+                textDecoration: "none",
+                letterSpacing: "0.3px",
+              }}
+            >
+              Your First 111 Reading is Free
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Inline styles and keyframes */}
       <style>{`
         @keyframes glowPulse {
           0% { box-shadow: 0 0 20px rgba(212,175,55,0.35), 0 0 40px rgba(212,175,55,0.18); transform: scale(1); }
           100% { box-shadow: 0 0 36px rgba(212,175,55,0.95), 0 0 80px rgba(212,175,55,0.35); transform: scale(1.02); }
         }
 
-        /* gold underline */
         .gold-underline::after{
           content: "";
           position: absolute;
@@ -226,33 +244,68 @@ export default function Hero() {
           100% { left: 120%; opacity: 0; }
         }
 
-        /* small responsive rules */
+        /* particle styling */
+        .particles { pointer-events:none; }
+        .particles .p {
+          position: absolute;
+          display: block;
+          width: 6px;
+          height: 6px;
+          background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,0.6) 30%, rgba(212,175,55,0.9) 60%, rgba(212,175,55,0.6));
+          border-radius: 50%;
+          box-shadow: 0 0 8px rgba(212,175,55,0.6), 0 0 12px rgba(255,255,255,0.12);
+          opacity: 0.95;
+          transform: translate3d(0,0,0);
+          mix-blend-mode: screen;
+        }
+        .p.p1 { left: 10%; top: 20%; width:8px; height:8px; animation: float1 6.8s linear infinite; }
+        .p.p2 { left: 70%; top: 40%; width:6px; height:6px; animation: float2 8.2s linear infinite; }
+        .p.p3 { left: 40%; top: 70%; width:5px; height:5px; animation: float3 7.2s linear infinite; }
+        .p.p4 { left: 85%; top: 10%; width:6px; height:6px; animation: float4 9.0s linear infinite; }
+        .p.p5 { left: 22%; top: 55%; width:4px; height:4px; animation: float5 6.2s linear infinite; }
+        .p.p6 { left: 60%; top: 18%; width:5px; height:5px; animation: float6 8.8s linear infinite; }
+
+        @keyframes float1 {
+          0% { transform: translateY(0) scale(1); opacity: 0.95 }
+          50% { transform: translateY(-26px) scale(1.05); opacity: 0.8 }
+          100% { transform: translateY(0) scale(1); opacity: 0.95 }
+        }
+        @keyframes float2 {
+          0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.95 }
+          50% { transform: translateY(-36px) translateX(-12px) rotate(12deg); opacity: 0.7 }
+          100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.95 }
+        }
+        @keyframes float3 {
+          0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.95 }
+          50% { transform: translateY(-18px) translateX(18px) scale(1.02); opacity: 0.85 }
+          100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.95 }
+        }
+        @keyframes float4 {
+          0% { transform: translateY(0) translateX(0); opacity: 0.95 }
+          50% { transform: translateY(-50px) translateX(-30px) scale(0.98); opacity: 0.75 }
+          100% { transform: translateY(0) translateX(0); opacity: 0.95 }
+        }
+        @keyframes float5 {
+          0% { transform: translateY(0); opacity: 0.95 }
+          50% { transform: translateY(-22px); opacity: 0.8 }
+          100% { transform: translateY(0); opacity: 0.95 }
+        }
+        @keyframes float6 {
+          0% { transform: translateY(0) translateX(0); opacity: 0.95 }
+          50% { transform: translateY(-28px) translateX(12px); opacity: 0.8 }
+          100% { transform: translateY(0) translateX(0); opacity: 0.95 }
+        }
+
+        /* Responsive tweaks */
         @media (max-width: 900px) {
           section.container { padding-top: 90px !important; }
         }
-
         @media (max-width: 640px) {
           header { background-size: contain !important; background-position: center top !important; }
           section.container { padding-top: 120px !important; }
+          .particles { display: none; }
         }
       `}</style>
     </header>
   );
 }
-<a
-  href="#book"
-  style={{
-    background: "#D4AF37",
-    color: "#000",
-    padding: "12px 26px",
-    borderRadius: 999,
-    fontWeight: 700,
-    display: "inline-block",
-    marginTop: "16px",
-    boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
-    textDecoration: "none",
-    letterSpacing: "0.3px"
-  }}
->
-  Your First 111 Reading is Free
-</a>
