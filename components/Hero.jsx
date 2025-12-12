@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{
         backgroundImage: "url('/images/hero-sun.png')",
-        backgroundSize: "40%",
+        backgroundSize: "70%",
         backgroundPosition: "105% 45%",   // adjust later
         backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
@@ -16,42 +16,41 @@ export default function Hero() {
     >
 
       {/* ================== TOP CENTER LOGO ================== */}
-      <div
-        className="absolute left-1/2 transform -translate-x-1/2 mt-6 flex flex-col items-center z-[50]"
-      >
+<div
+  className="absolute top-6 w-full flex flex-col items-center justify-center z-[50]"
+>
+  {/* Glowing Gold Aura Logo */}
+  <div
+    style={{
+      width: "72px",
+      height: "72px",
+      borderRadius: "50%",
+      border: "3px solid #D4AF37",
+      background: "#fff",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontWeight: 700,
+      fontSize: "1.8rem",
+      boxShadow: "0 0 25px rgba(212,175,55,0.7), 0 0 60px rgba(212,175,55,0.4)",
+      animation: "glowPulse 4s ease-in-out infinite alternate"
+    }}
+  >
+    A
+  </div>
 
-        {/* Glowing gold aura circle */}
-        <div
-          style={{
-            width: "72px",
-            height: "72px",
-            borderRadius: "50%",
-            border: "3px solid #D4AF37",
-            background: "#fff",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontWeight: "700",
-            fontSize: "1.8rem",
-            boxShadow: "0 0 25px rgba(212,175,55,0.7), 0 0 60px rgba(212,175,55,0.4)",
-            animation: "glowPulse 4s ease-in-out infinite alternate"
-          }}
-        >
-          A
-        </div>
-
-        <h1
-          className="text-center mt-3"
-          style={{
-            fontFamily: "Playfair Display, serif",
-            fontSize: "2rem",
-            fontWeight: "700",
-            letterSpacing: ".6px"
-          }}
-        >
-          Aura Ki Vibes
-        </h1>
-      </div>
+  <h1
+    className="text-center mt-3"
+    style={{
+      fontFamily: "Playfair Display, serif",
+      fontSize: "2rem",
+      fontWeight: "700",
+      letterSpacing: ".6px"
+    }}
+  >
+    Aura Ki Vibes
+  </h1>
+</div>
 
 
       {/* ================== MAIN HERO CONTENT ================== */}
