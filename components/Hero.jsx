@@ -165,7 +165,7 @@ export default function Hero() {
           </p>
 
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            {/* Gold filled CTA */}
+          
 <a
   href="#book"
   style={{
@@ -183,26 +183,6 @@ export default function Hero() {
 >
   Your First 111 Reading is Free
 </a>
-
-
-            <a
-              href="#contact"
-              style={{
-                padding: "11px 20px",
-                borderRadius: 999,
-                border: "2px solid #D4AF37",
-                background: "#fff",
-                color: "#222",
-                fontWeight: 700,
-                textDecoration: "none",
-                display: "inline-block",
-              }}
-            >
-              Contact / Verify
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Inline styles for animation + responsive tweaks */}
       <style>{`
