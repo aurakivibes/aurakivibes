@@ -166,6 +166,48 @@ export default function Hero() {
           {/* CTA AREA */}
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
             
+  {/* EXPLORE YOUR AURA – Primary Gold Button */}
+  <a
+    href="#aura"
+    style={{
+      background: "#D4AF37",
+      color: "#000",
+      padding: "12px 26px",
+      borderRadius: 999,
+      fontWeight: 700,
+      display: "inline-block",
+      marginBottom: "12px",
+      boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+      textDecoration: "none",
+      letterSpacing: "0.3px",
+      marginRight: "12px"
+    }}
+  >
+    Explore Your Aura
+  </a>
+
+  {/* WhatsApp CTA */}
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      background: "#25D366",
+      color: "#fff",
+      padding: "12px 26px",
+      borderRadius: 999,
+      fontWeight: 700,
+      display: "inline-block",
+      textDecoration: "none",
+      boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
+      letterSpacing: "0.3px"
+    }}
+  >
+    Chat on WhatsApp
+  </a>
+
+</div>
+
 
             {/* Numerology CTA — Gold filled */}
             <a
