@@ -255,3 +255,20 @@ export default function Hero() {
     </header>
   );
 }
+<a
+  href="#book"
+  style={{
+    background: "#D4AF37",
+    color: "#000",
+    padding: "12px 26px",
+    borderRadius: 999,
+    fontWeight: 700,
+    display: "inline-block",
+    marginTop: "16px",
+    boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+    textDecoration: "none",
+    letterSpacing: "0.3px"
+  }}
+>
+  Your First 111 Reading is Free
+</a>
