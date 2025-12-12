@@ -15,29 +15,54 @@ export default function Hero() {
       }}
     >
 
-      {/* ================== TOP CENTER LOGO ================== */}
+    {/* TOP CENTER FIXED LOGO — GUARANTEED CENTERED */}
 <div
-  className="absolute top-6 w-full flex flex-col items-center justify-center z-[50]"
+  style={{
+    position: 'fixed',
+    top: 18,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    zIndex: 9999,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    pointerEvents: 'auto'
+  }}
 >
-  {/* Glowing Gold Aura Logo */}
   <div
     style={{
-      width: "72px",
-      height: "72px",
-      borderRadius: "50%",
-      border: "3px solid #D4AF37",
-      background: "#fff",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      fontWeight: 700,
-      fontSize: "1.8rem",
-      boxShadow: "0 0 25px rgba(212,175,55,0.7), 0 0 60px rgba(212,175,55,0.4)",
-      animation: "glowPulse 4s ease-in-out infinite alternate"
+      width: 74,
+      height: 74,
+      borderRadius: '50%',
+      border: '3px solid #D4AF37',
+      background: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 800,
+      fontSize: '1.9rem',
+      boxShadow: '0 0 25px rgba(212,175,55,0.7), 0 0 60px rgba(212,175,55,0.35)',
+      animation: 'glowPulse 4s ease-in-out infinite alternate'
     }}
   >
     A
   </div>
+
+  <div
+    style={{
+      marginTop: 8,
+      textAlign: 'center',
+      fontFamily: 'Playfair Display, serif',
+      fontWeight: 700,
+      fontSize: '1.3rem',
+      letterSpacing: '0.5px',
+      color: '#1e1d1c'
+    }}
+  >
+    Aura Ki Vibes
+  </div>
+</div>
+
 
   <h1
     className="text-center mt-3"
