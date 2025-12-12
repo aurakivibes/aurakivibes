@@ -181,17 +181,17 @@ export default function Hero() {
                 letterSpacing: "0.3px",
               }}
             >
-              Explore Your Aura
+             Your First 111 Reading is Free
             </a>
 
             {/* WhatsApp CTA — update phone number below */}
             <a
-              href="https://wa.me/919876543210" /* <- REPLACE with your phone number in international format without '+' or spaces */
+              href="https://wa.me/919718299989" /* <- REPLACE with your phone number in international format without '+' or spaces */
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                background: "#25D366",
-                color: "#fff",
+                background: "#D4AF37",
+                color: "#000",
                 padding: "12px 26px",
                 borderRadius: 999,
                 fontWeight: 700,
