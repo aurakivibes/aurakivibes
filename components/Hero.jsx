@@ -165,21 +165,25 @@ export default function Hero() {
           </p>
 
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            <a
-              href="#astrologers"
-              style={{
-                background: "#000",
-                color: "#fff",
-                padding: "12px 22px",
-                borderRadius: 999,
-                fontWeight: 700,
-                textDecoration: "none",
-                marginRight: 12,
-                display: "inline-block",
-              }}
-            >
-              View Astrologers
-            </a>
+            {/* Gold filled CTA */}
+<a
+  href="#book"
+  style={{
+    background: "#D4AF37",
+    color: "#000",
+    padding: "12px 26px",
+    borderRadius: 999,
+    fontWeight: 700,
+    display: "inline-block",
+    marginTop: "16px",
+    boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+    textDecoration: "none",
+    letterSpacing: "0.3px"
+  }}
+>
+  Your First 111 Reading is Free
+</a>
+
 
             <a
               href="#contact"
