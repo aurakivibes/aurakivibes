@@ -165,7 +165,7 @@ export default function Hero() {
 
           {/* CTA AREA */}
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            {/* Explore Your Aura — primary gold button */}
+            {/* Your First 111 Reading is Free — primary gold button */}
             <a
               href="#aura"
               style={{
