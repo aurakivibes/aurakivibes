@@ -8,7 +8,7 @@ export default function Hero() {
       style={{
         backgroundImage: "url('/images/hero-sun.png')",
         backgroundSize: "40%",
-        backgroundPosition: "120% 45%",
+        backgroundPosition: "120% 25%",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#f5ebd8",
         minHeight: "100vh",
