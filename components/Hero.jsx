@@ -165,21 +165,7 @@ export default function Hero() {
 
           {/* CTA AREA */}
           <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            <a
-              href="#astrologers"
-              style={{
-                marginRight: 12,
-                background: "#000",
-                color: "#fff",
-                padding: "12px 22px",
-                borderRadius: 999,
-                fontWeight: 700,
-                textDecoration: "none",
-                display: "inline-block",
-              }}
-            >
-              View Astrologers
-            </a>
+            
 
             {/* Numerology CTA — Gold filled */}
             <a
