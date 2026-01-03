@@ -333,7 +333,7 @@ export default function Hero() {
   </a>
 
   {/* WhatsApp */}
-  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex" }}>
+  <a href="https://wa.me/919718299989" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex" }}>
     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path d="M12 2C6.5 2 2 6.1 2 11c0 2.1.8 4.1 2.2 5.7L3 22l5.5-1.8c1.1.4 2.3.6 3.5.6 5.5 0 10-4.1 10-9S17.5 2 12 2z" stroke="#25D366" strokeWidth="2" fill="none" />
       <path d="M9 9c0 .5.2 1 .5 1.4l.7.8c.2.2.2.5 0 .8-.2.3-.5.6-.8.8-.2.2-.3.4-.1.7 1 1.7 2.6 2.7 4.5 3 .3 0 .5-.1.6-.3l.8-1c.3-.3.8-.3 1.2-.1.4.2.8.4 1.2.7.4.3.8.2 1.1-.1.3-.3.5-.7.7-1.2.1-.6-.1-1.2-.4-1.8-.4-.5-.8-.9-1.4-1.2-.6-.3-1.2-.4-1.8-.4-.5 0-.9.1-1.3.3" stroke="#25D366" strokeWidth="1.4" fill="none" />
