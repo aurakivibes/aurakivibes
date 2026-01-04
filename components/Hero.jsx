@@ -65,20 +65,38 @@ export default function Hero() {
             </a>
 
             {/* REAL SVG SOCIAL ICONS */}
-            <div className="hero-socials" style={socials}>
-              <SocialIcon href="https://instagram.com" path="M224.1 141c-63.6..." />
-              <SocialIcon href="https://youtube.com" path="M549.7 124.1..." />
-              <SocialIcon href="https://wa.me/919718299989" path="M380.9 97.1..." color="#25D366" />
-              <SocialIcon href="https://facebook.com" path="M279.14 288..." />
-            </div>
-          </div>
-        </div>
-      </section>
+<div className="hero-socials" style={{ marginTop: 18, display: "flex", gap: 18 }}>
+  {/* Instagram */}
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#D4AF37">
+      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10z"/>
+      <circle cx="12" cy="12" r="3.2"/>
+      <circle cx="17.5" cy="6.5" r="1"/>
+    </svg>
+  </a>
 
-      {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
-    </header>
-  );
-}
+  {/* YouTube */}
+  <a href="https://youtube.com" target="_blank" rel="noreferrer">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#D4AF37">
+      <path d="M21.6 7.2c-.2-1-1-1.8-2-2C17.8 5 12 5 12 5s-5.8 0-7.6.4c-1 .2-1.8 1-2 2C2 9 2 12 2 12s0 3 .4 4.8c.2 1 1 1.8 2 2 1.8.4 7.6.4 7.6.4s5.8 0 7.6-.4c1-.2 1.8-1 2-2 .4-1.8.4-4.8.4-4.8s0-3-.4-4.8z"/>
+      <polygon points="10,9 16,12 10,15" fill="#000"/>
+    </svg>
+  </a>
+
+  {/* WhatsApp */}
+  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#25D366">
+      <path d="M12 2C6.5 2 2 6.1 2 11c0 2.1.8 4.1 2.2 5.7L3 22l5.5-1.8c1.1.4 2.3.6 3.5.6 5.5 0 10-4.1 10-9S17.5 2 12 2z"/>
+    </svg>
+  </a>
+
+  {/* Facebook */}
+  <a href="https://facebook.com" target="_blank" rel="noreferrer">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#D4AF37">
+      <path d="M13 3h4v4h-4v3h4l-1 4h-3v7h-4v-7H7v-4h2V7c0-2.8 1.7-4 4-4z"/>
+    </svg>
+  </a>
+</div>
 
 /* SOCIAL ICON COMPONENT */
 function SocialIcon({ href, path, color = "#D4AF37" }) {
