@@ -1,10 +1,10 @@
-// app/page.js
-import Hero from '../components/Hero'
+import "@/styles/globals.css";
 
-export default function Page() {
+export default function RootLayout({ children }) {
   return (
-    <main>
-      <Hero />
-    </main>
-  )
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
+
