@@ -169,10 +169,10 @@ export default function Hero() {
           </p>
 
 
-          {/* CTA AREA */}
+         {/* CTA AREA */}
 <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
 
-  {/* FREE 111 READING — BUTTON (NOT <a>) */}
+  {/* FREE 111 READING BUTTON */}
   <button
     onClick={() => setOpenForm(true)}
     style={{
@@ -211,47 +211,30 @@ export default function Hero() {
     Chat on WhatsApp
   </a>
 
-{/* SOCIAL ICONS — REAL SVG ICONS */}
-<div
-  style={{
-    display: "flex",
-    gap: "20px",
-    marginTop: "22px",
-    alignItems: "center"
-  }}
->
+  {/* SOCIAL ICONS */}
+  <div
+    style={{
+      display: "flex",
+      gap: "20px",
+      marginTop: "20px",
+      alignItems: "center"
+    }}
+  >
+    <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
+      Instagram
+    </a>
+    <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" rel="noreferrer">
+      YouTube
+    </a>
+    <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
+      WhatsApp
+    </a>
+    <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer">
+      Facebook
+    </a>
+  </div>
 
-  {/* Instagram */}
-  <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
-    <svg width="28" height="28" viewBox="0 0 448 512" fill="#D4AF37">
-      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9z"/>
-      <path d="M398.8 80c-8.3-35.3-35.1-62.1-70.4-70.4C296.2 0 224 0 224 0S151.8 0 119.6 9.6C84.3 17.9 57.5 44.7 49.2 80 40.9 112.3 40.9 224 40.9 224s0 111.7 8.3 144c8.3 35.3 35.1 62.1 70.4 70.4C151.8 448 224 448 224 448s72.2 0 104.4-9.6c35.3-8.3 62.1-35.1 70.4-70.4 8.3-32.3 8.3-144 8.3-144s0-111.7-8.3-144z"/>
-    </svg>
-  </a>
-
-  {/* YouTube */}
-  <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" rel="noreferrer">
-    <svg width="28" height="28" viewBox="0 0 576 512" fill="#D4AF37">
-      <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.5-48.6C458.4 64 288 64 288 64S117.6 64 74.8 75.5c-23.7 6.3-42.2 24.9-48.5 48.6C14.8 166.9 14.8 256 14.8 256s0 89.1 11.5 131.9c6.3 23.7 24.8 42.3 48.5 48.6C117.6 448 288 448 288 448s170.4 0 213.2-11.5c23.7-6.3 42.2-24.9 48.5-48.6 11.5-42.8 11.5-131.9 11.5-131.9s0-89.1-11.5-131.9zM232 336V176l142.9 80L232 336z"/>
-    </svg>
-  </a>
-
-  {/* WhatsApp */}
-  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
-    <svg width="28" height="28" viewBox="0 0 448 512" fill="#25D366">
-      <path d="M380.9 97.1C339-1.6 214.2-31.6 128.4 28.8 42.7 89.3 16.6 214.4 77 300.1L40 448l151.4-39.5c78.7 42.8 177.3 16.1 224.5-61.6 47.2-77.7 30.3-179.7-35-250.8z"/>
-    </svg>
-  </a>
-
-  {/* Facebook */}
-  <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer">
-    <svg width="28" height="28" viewBox="0 0 320 512" fill="#D4AF37">
-      <path d="M279.14 288l14.22-92.66h-88.91V117.78c0-25.35 12.42-50.06 52.24-50.06H297V6.26S259.36 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-    </svg>
-  </a>
 </div>
-
-      </section>
 
       {/* Inline styles and keyframes */}
       <style>{`
