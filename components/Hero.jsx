@@ -170,97 +170,64 @@ export default function Hero() {
 
 
           {/* CTA AREA */}
-          <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            {/* Your First 111 Reading is Free — primary gold button */}
-            <a
-              href="#aura"
-              style={{
-                marginRight: 12,
-                background: "#D4AF37",
-                color: "#000",
-                padding: "12px 26px",
-                borderRadius: 999,
-                fontWeight: 700,
-                textDecoration: "none",
-                display: "inline-block",
-                boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
-                letterSpacing: "0.3px",
-              }}
-            >
-            <a onClick={() => setOpenForm(true)} style={{ cursor: "pointer" }}>
-  Your First 111 Reading is Free
-</a>
+<div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
 
+  {/* FREE 111 READING — BUTTON (NOT <a>) */}
+  <button
+    onClick={() => setOpenForm(true)}
+    style={{
+      background: "#D4AF37",
+      color: "#000",
+      padding: "12px 26px",
+      borderRadius: "999px",
+      fontWeight: 700,
+      border: "none",
+      cursor: "pointer",
+      marginRight: "12px",
+      boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+      letterSpacing: "0.3px"
+    }}
+  >
+    Your First 111 Reading is Free
+  </button>
 
-            {/* WhatsApp CTA — update phone number below */}
-            <a
-              href="https://wa.me/919718299989" /* <- REPLACE with your phone number in international format without '+' or spaces */
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: "#D4AF37",
-                color: "#000",
-                padding: "12px 26px",
-                borderRadius: 999,
-                fontWeight: 700,
-                display: "inline-block",
-                textDecoration: "none",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
-                letterSpacing: "0.3px",
-              }}
-            >
-              Chat on WhatsApp
-            </a>
-            {/* SOCIAL ICONS — BELOW CTA BUTTONS */}
-<div
-  style={{
-    display: "flex",
-    gap: "18px",
-    marginTop: "20px",
-    alignItems: "center"
-  }}
->
-  {/* Instagram */}
-  <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="2" width="20" height="20" rx="6" stroke="#D4AF37" strokeWidth="2" />
-      <circle cx="12" cy="12" r="4" stroke="#D4AF37" strokeWidth="2" />
-      <circle cx="17" cy="7" r="1.3" fill="#D4AF37" />
-    </svg>
+  {/* WHATSAPP CTA */}
+  <a
+    href="https://wa.me/919718299989"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      background: "#D4AF37",
+      color: "#000",
+      padding: "12px 26px",
+      borderRadius: "999px",
+      fontWeight: 700,
+      display: "inline-block",
+      textDecoration: "none",
+      boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
+      letterSpacing: "0.3px"
+    }}
+  >
+    Chat on WhatsApp
   </a>
 
-  {/* YouTube */}
-  <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" rel="noreferrer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <rect x="2" y="5" width="20" height="14" rx="4" stroke="#D4AF37" strokeWidth="2" />
-      <polygon points="10,9 16,12 10,15" fill="#D4AF37" />
-    </svg>
-  </a>
+  {/* SOCIAL ICONS — BELOW BUTTONS */}
+  <div
+    style={{
+      display: "flex",
+      gap: "18px",
+      marginTop: "20px",
+      alignItems: "center"
+    }}
+  >
+    <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">IG</a>
+    <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" rel="noreferrer">YT</a>
+    <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">WA</a>
+    <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer">FB</a>
+  </div>
 
-  {/* WhatsApp */}
-  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 2C6.5 2 2 6.1 2 11c0 2.1.8 4.1 2.2 5.7L3 22l5.5-1.8c1.1.4 2.3.6 3.5.6 5.5 0 10-4.1 10-9S17.5 2 12 2z"
-        stroke="#25D366"
-        strokeWidth="2"
-      />
-    </svg>
-  </a>
-
-  {/* Facebook */}
-  <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="#D4AF37" strokeWidth="2" />
-      <path
-        d="M13 8h2V5h-2c-2.2 0-4 1.8-4 4v2H7v3h2v6h3v-6h2l1-3h-3V9c0-.6.4-1 1-1z"
-        fill="#D4AF37"
-      />
-    </svg>
-  </a>
 </div>
 
-          </div>
         </div>
       </section>
 
