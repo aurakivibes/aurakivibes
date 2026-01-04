@@ -231,10 +231,7 @@ export default function Hero() {
     </a>
     <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer">
       Facebook
-    </a>
-  </div>
-
-</div>
+        
 
       {/* Inline styles and keyframes */}
       <style>{`
@@ -338,8 +335,17 @@ export default function Hero() {
           section.container { padding-top: 120px !important; }
           .particles { display: none; }
         }
+     </div>
+
+        </div>   {/* closes main content div */}
+      </section>
+
+      {/* Inline styles and keyframes */}
+      <style>{`
+        ...
       `}</style>
-        {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
+
+      {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
     </header>
   );
 }
