@@ -147,6 +147,9 @@ export default function Hero() {
               It’s Written.
             </span>
           </h2>
+<p style={{ color: "red", fontSize: "22px", marginTop: "20px" }}>
+  TEST TEXT – IF YOU SEE THIS, JSX IS WORKING
+</p>
 
           <p
             style={{
