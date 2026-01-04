@@ -99,17 +99,19 @@
 }
 
 /* ===== SOCIAL ICONS ===== */
-.hero-socials {
-  display: flex;
-  gap: 18px;
-  margin-top: 18px;
+.hero-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-socials svg {
   width: 26px;
   height: 26px;
   fill: #D4AF37;
+  display: block;      /* 👈 VERY IMPORTANT */
 }
+
 
 /* ===== ANIMATIONS ===== */
 @keyframes glowPulse {
