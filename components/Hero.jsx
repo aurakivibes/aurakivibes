@@ -163,6 +163,51 @@ export default function Hero() {
             Understand what your chart reveals about love, career, purpose and the energies
             shaping your life right now — with clarity and accuracy guided by true astrology.
           </p>
+
+
+          {/* CTA AREA */}
+          <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
+            {/* Your First 111 Reading is Free — primary gold button */}
+            <a
+              href="#aura"
+              style={{
+                marginRight: 12,
+                background: "#D4AF37",
+                color: "#000",
+                padding: "12px 26px",
+                borderRadius: 999,
+                fontWeight: 700,
+                textDecoration: "none",
+                display: "inline-block",
+                boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
+                letterSpacing: "0.3px",
+              }}
+            >
+             Your First 111 Reading is Free
+            </a>
+
+            {/* WhatsApp CTA — update phone number below */}
+            <a
+              href="https://wa.me/919718299989" /* <- REPLACE with your phone number in international format without '+' or spaces */
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "#D4AF37",
+                color: "#000",
+                padding: "12px 26px",
+                borderRadius: 999,
+                fontWeight: 700,
+                display: "inline-block",
+                textDecoration: "none",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
+                letterSpacing: "0.3px",
+              }}
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
 {/* SOCIAL ICONS – REAL SVGs (VISIBLE FIXED VERSION) */}
 <div
   style={{
@@ -212,51 +257,6 @@ export default function Hero() {
     </svg>
   </a>
 </div>
-
-          {/* CTA AREA */}
-          <div style={{ marginTop: 22, position: "relative", zIndex: 5 }}>
-            {/* Your First 111 Reading is Free — primary gold button */}
-            <a
-              href="#aura"
-              style={{
-                marginRight: 12,
-                background: "#D4AF37",
-                color: "#000",
-                padding: "12px 26px",
-                borderRadius: 999,
-                fontWeight: 700,
-                textDecoration: "none",
-                display: "inline-block",
-                boxShadow: "0 4px 12px rgba(212,175,55,0.45)",
-                letterSpacing: "0.3px",
-              }}
-            >
-             Your First 111 Reading is Free
-            </a>
-
-            {/* WhatsApp CTA — update phone number below */}
-            <a
-              href="https://wa.me/919718299989" /* <- REPLACE with your phone number in international format without '+' or spaces */
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: "#D4AF37",
-                color: "#000",
-                padding: "12px 26px",
-                borderRadius: 999,
-                fontWeight: 700,
-                display: "inline-block",
-                textDecoration: "none",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.25)",
-                letterSpacing: "0.3px",
-              }}
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Inline styles and keyframes */}
       <style>{`
         @keyframes glowPulse {
