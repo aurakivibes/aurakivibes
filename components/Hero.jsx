@@ -232,7 +232,7 @@ export default function Hero() {
   </a>
 
   {/* WhatsApp */}
-  <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">
+  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path
         d="M12 2C6.5 2 2 6.1 2 11c0 2.1.8 4.1 2.2 5.7L3 22l5.5-1.8c1.1.4 2.3.6 3.5.6 5.5 0 10-4.1 10-9S17.5 2 12 2z"
