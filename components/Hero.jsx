@@ -1,3 +1,6 @@
+import { useState } from "react";
+import FreeReadingForm from "./FreeReadingForm";
+
 // components/Hero.jsx
 import Link from "next/link";
 
