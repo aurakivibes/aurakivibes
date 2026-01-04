@@ -1,10 +1,11 @@
-import { useState } from "react";
-import FreeReadingForm from "./FreeReadingForm";
-
 // components/Hero.jsx
 import Link from "next/link";
 
+import { useState } from "react";
+import FreeReadingForm from "./FreeReadingForm";
+
 export default function Hero() {
+  const [openForm, setOpenForm] = useState(false);
   return (
     <header
       className="relative overflow-hidden"
@@ -186,8 +187,10 @@ export default function Hero() {
                 letterSpacing: "0.3px",
               }}
             >
-             Your First 111 Reading is Free
-            </a>
+            <a onClick={() => setOpenForm(true)} style={{ cursor: "pointer" }}>
+  Your First 111 Reading is Free
+</a>
+
 
             {/* WhatsApp CTA — update phone number below */}
             <a
@@ -364,6 +367,7 @@ export default function Hero() {
           .particles { display: none; }
         }
       `}</style>
+        {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
     </header>
   );
 }
