@@ -98,16 +98,7 @@ export default function Hero() {
   </a>
 </div>
 
-/* SOCIAL ICON COMPONENT */
-function SocialIcon({ href, path, color = "#D4AF37" }) {
-  return (
-    <a href={href} target="_blank" rel="noreferrer">
-      <svg width="26" height="26" viewBox="0 0 576 512" fill={color}>
-        <path d={path} />
-      </svg>
-    </a>
-  );
-}
+
 
 /* STYLES */
 const logoWrap = {
@@ -189,3 +180,13 @@ const socials = {
   display: "flex",
   gap: 18,
 };
+/* SOCIAL ICON COMPONENT */
+function SocialIcon({ href, path, color = "#D4AF37" }) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      <svg width="26" height="26" viewBox="0 0 576 512" fill={color}>
+        <path d={path} />
+      </svg>
+    </a>
+  );
+}
