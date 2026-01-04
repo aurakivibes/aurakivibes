@@ -209,7 +209,9 @@ export default function Hero() {
     }}
   >
     Chat on WhatsApp
-  </{/* SOCIAL ICONS — REAL SVG ICONS */}
+  </a>
+
+{/* SOCIAL ICONS — REAL SVG ICONS */}
 <div
   style={{
     display: "flex",
@@ -218,6 +220,7 @@ export default function Hero() {
     alignItems: "center"
   }}
 >
+
   {/* Instagram */}
   <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
     <svg width="28" height="28" viewBox="0 0 448 512" fill="#D4AF37">
