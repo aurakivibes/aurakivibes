@@ -22,7 +22,11 @@
   transform: translateX(-50%);
   text-align: center;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 👈 THIS FIXES IT */
 }
+
 
 .hero-logo-circle {
   width: 72px;
