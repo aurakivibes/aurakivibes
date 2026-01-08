@@ -167,3 +167,76 @@
     justify-content: center;
   }
 }
+/* ===== FREE READING FORM ===== */
+
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.form-box {
+  background: #fffaf0;
+  padding: 28px 26px 32px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.form-box h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.form-subtext {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 6px 0 18px;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-box input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.form-box input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.form-box button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: #d4af37;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
