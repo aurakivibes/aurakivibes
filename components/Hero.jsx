@@ -26,8 +26,9 @@ import FreeReadingForm from "./FreeReadingForm";
 
           <div className="hero-cta">
             <button onClick={() => setOpenForm(true)}>
-              Your First 111 Reading is Free
-            </button>
+  Your First 111 Reading is Free
+</button>
+
 
             <a
               href="https://wa.me/919718299989"
