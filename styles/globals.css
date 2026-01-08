@@ -105,18 +105,16 @@
   margin-top: 18px;
 }
 
-.hero-socials i {
-  font-size: 26px;
-  color: #D4AF37;
-  display: inline-block;
+.hero-socials img {
+  width: 26px;
+  height: 26px;
+  filter: invert(72%) sepia(35%) saturate(450%) hue-rotate(6deg);
+  transition: transform 0.2s ease;
 }
 
-
-.hero-socials i:hover {
+.hero-socials img:hover {
   transform: translateY(-2px);
-  color: #b8962e;
 }
-
 
 
 /* ===== ANIMATIONS ===== */
