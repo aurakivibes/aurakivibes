@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FreeReadingForm from "./FreeReadingForm";
 
+export default function Hero() {
+  const [openForm, setOpenForm] = useState(false);
 
   return (
     <header className="hero-root">
@@ -26,9 +28,8 @@ import FreeReadingForm from "./FreeReadingForm";
 
           <div className="hero-cta">
             <button onClick={() => setOpenForm(true)}>
-  Your First 111 Reading is Free
-</button>
-
+              Your First 111 Reading is Free
+            </button>
 
             <a
               href="https://wa.me/919718299989"
@@ -38,40 +39,46 @@ import FreeReadingForm from "./FreeReadingForm";
               Chat on WhatsApp
             </a>
 
-            {/* SOCIAL ICONS – FONT AWESOME */}
-           <div className="hero-socials">
-  <a href="https://www.instagram.com/aurakivibes?utm_source=qr&igsh=MWVnaW5xbTJseDQ0Nw==" target="_blank" rel="noreferrer">
-    <img src="/icons/instagram.svg" alt="Instagram" />
-  </a>
+            {/* SOCIAL ICONS */}
+            <div className="hero-socials">
+              <a
+                href="https://www.instagram.com/aurakivibes"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/icons/instagram.svg" alt="Instagram" />
+              </a>
 
-  <a href="https://youtube.com/@aurakivibes?si=Q4v2AQAVeRvozjL0" target="_blank" rel="noreferrer">
-    <img src="/icons/youtube.svg" alt="YouTube" />
-  </a>
+              <a
+                href="https://youtube.com/@aurakivibes"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/icons/youtube.svg" alt="YouTube" />
+              </a>
 
-  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
-    <img src="/icons/whatsapp.svg" alt="WhatsApp" />
-  </a>
+              <a
+                href="https://wa.me/919718299989"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/icons/whatsapp.svg" alt="WhatsApp" />
+              </a>
 
-  <a href="https://facebook.com" target="_blank" rel="noreferrer">
-    <img src="/icons/facebook.svg" alt="Facebook" />
-  </a>
-</div>
-
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="/icons/facebook.svg" alt="Facebook" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {openForm && (
-        <div className="modal-overlay">
-          <div className="modal-box">
-            <h3>Free 111 Reading</h3>
-            <p>Form will be added here</p>
-            <button onClick={() => setOpenForm(false)}>Close</button>
-          </div>
-        </div>
-      )}
+      {/* FORM POPUP (ONLY ONCE) */}
       {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
-
     </header>
   );
 }
