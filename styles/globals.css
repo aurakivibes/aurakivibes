@@ -99,18 +99,23 @@
 }
 
 /* ===== SOCIAL ICONS ===== */
-.hero-socials a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.hero-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
 }
 
-.hero-socials svg {
-  width: 26px;
-  height: 26px;
-  fill: #D4AF37;
-  display: block;      /* 👈 VERY IMPORTANT */
+.hero-socials i {
+  font-size: 26px;
+  color: #D4AF37;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
+
+.hero-socials i:hover {
+  transform: translateY(-2px);
+  color: #b8962e;
+}
+
 
 
 /* ===== ANIMATIONS ===== */
