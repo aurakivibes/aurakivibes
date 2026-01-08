@@ -38,21 +38,41 @@ export default function Hero() {
               Chat on WhatsApp
             </a>
 
-            {/* SOCIAL ICONS */}
-           <div className="hero-socials">
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <i className="fa-brands fa-instagram"></i>
-  </a>
+            {/* SOCIAL ICONS – FONT AWESOME */}
+            <div className="hero-socials">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
 
-  <a href="https://youtube.com" target="_blank" rel="noreferrer">
-    <i className="fa-brands fa-youtube"></i>
-  </a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
 
-  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
-    <i className="fa-brands fa-whatsapp"></i>
-  </a>
+              <a
+                href="https://wa.me/919718299989"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa-brands fa-whatsapp"></i>
+              </a>
 
-  <a href="https://facebook.com" target="_blank" rel="noreferrer">
-    <i className="fa-brands fa-facebook-f"></i>
-  </a>
-</div>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {openForm && (
+        <div className="modal-overlay">
+          <div className="modal-box">
+            <h3>Free 111 Reading</h3>
+            <p>Form will be added here</p>
+            <button onClick={() => setOpenForm(false)}>Close</button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
