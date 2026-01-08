@@ -44,7 +44,7 @@ export default function Hero() {
     <img src="/icons/instagram.svg" alt="Instagram" />
   </a>
 
-  <a href="https://youtube.com" target="_blank" rel="noreferrer">
+  <a href="https://youtube.com/@aurakivibes?si=Q4v2AQAVeRvozjL0" target="_blank" rel="noreferrer">
     <img src="/icons/youtube.svg" alt="YouTube" />
   </a>
 
