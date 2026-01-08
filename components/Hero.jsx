@@ -40,7 +40,7 @@ export default function Hero() {
 
             {/* SOCIAL ICONS – FONT AWESOME */}
            <div className="hero-socials">
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+  <a href="https://www.instagram.com/aurakivibes?utm_source=qr&igsh=MWVnaW5xbTJseDQ0Nw==" target="_blank" rel="noreferrer">
     <img src="/icons/instagram.svg" alt="Instagram" />
   </a>
 
