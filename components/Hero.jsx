@@ -39,27 +39,23 @@ export default function Hero() {
             </a>
 
             {/* SOCIAL ICONS – FONT AWESOME */}
-            <div className="hero-socials">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-instagram"></i>
-              </a>
+           <div className="hero-socials">
+  <a href="https://instagram.com" target="_blank" rel="noreferrer">
+    <i className="fa-brands fa-instagram"></i>
+  </a>
 
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-youtube"></i>
-              </a>
+  <a href="https://youtube.com" target="_blank" rel="noreferrer">
+    <i className="fa-brands fa-youtube"></i>
+  </a>
 
-              <a
-                href="https://wa.me/919718299989"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="fa-brands fa-whatsapp"></i>
-              </a>
+  <a href="https://wa.me/919718299989" target="_blank" rel="noreferrer">
+    <i className="fa-brands fa-whatsapp"></i>
+  </a>
 
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-facebook-f"></i>
-              </a>
-            </div>
+  <a href="https://facebook.com" target="_blank" rel="noreferrer">
+    <i className="fa-brands fa-facebook-f"></i>
+  </a>
+</div>
           </div>
         </div>
       </section>
