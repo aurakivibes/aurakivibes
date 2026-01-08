@@ -70,6 +70,8 @@ import FreeReadingForm from "./FreeReadingForm";
           </div>
         </div>
       )}
+      {openForm && <FreeReadingForm onClose={() => setOpenForm(false)} />}
+
     </header>
   );
 }
