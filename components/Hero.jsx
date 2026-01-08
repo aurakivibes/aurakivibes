@@ -1,7 +1,6 @@
 import { useState } from "react";
+import FreeReadingForm from "./FreeReadingForm";
 
-export default function Hero() {
-  const [openForm, setOpenForm] = useState(false);
 
   return (
     <header className="hero-root">
