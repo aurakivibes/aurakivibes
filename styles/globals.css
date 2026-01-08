@@ -101,19 +101,32 @@
 /* ===== SOCIAL ICONS ===== */
 .hero-socials {
   display: flex;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 14px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.hero-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;      /* 🔹 control clickable area */
+  height: 34px;
+  border-radius: 50%;
+  background: transparent; /* 🔴 no background */
+  padding: 0;
 }
 
 .hero-socials img {
-  width: 26px;
-  height: 26px;
+  width: 22px;     /* 🔹 actual icon size */
+  height: 22px;
+  display: block;
   filter: invert(72%) sepia(35%) saturate(450%) hue-rotate(6deg);
   transition: transform 0.2s ease;
 }
 
-.hero-socials img:hover {
-  transform: translateY(-2px);
+.hero-socials a:hover img {
+  transform: translateY(-2px) scale(1.05);
 }
 
 
