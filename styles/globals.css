@@ -108,8 +108,9 @@
 .hero-socials i {
   font-size: 26px;
   color: #D4AF37;
-  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
 }
+
 
 .hero-socials i:hover {
   transform: translateY(-2px);
